@@ -487,6 +487,12 @@ strong {
     margin: 0;
 }
 
+.process-inner > p {
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+    max-width: var(--max-width-narrow);
+}
+
 /* ================================
    About
    ================================ */
