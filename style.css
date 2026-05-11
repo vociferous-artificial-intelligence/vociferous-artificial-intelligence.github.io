@@ -227,6 +227,13 @@ strong {
     border-color: var(--color-text);
 }
 
+.hero-sub-tech {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-md);
+    max-width: 680px;
+}
+
 .hero-note {
     font-size: 0.9375rem;
     color: var(--color-text-muted);
@@ -322,6 +329,48 @@ strong {
 }
 
 /* ================================
+   Real Estate Fit
+   ================================ */
+
+.re-fit {
+    background: var(--color-bg-alt);
+    padding: var(--space-xl) var(--space-md);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.re-fit-inner {
+    max-width: var(--max-width-narrow);
+    margin: 0 auto;
+}
+
+.re-fit-inner > p {
+    font-size: 1.0625rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-md);
+}
+
+.re-fit-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.re-fit-list li {
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    padding-left: 1.25rem;
+    position: relative;
+}
+
+.re-fit-list li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--color-text-light);
+}
+
+/* ================================
    Engagements
    ================================ */
 
@@ -411,6 +460,19 @@ strong {
 
 .work-card h3 {
     font-size: 1.125rem;
+}
+
+.work-card h3 a {
+    color: var(--color-text);
+    text-decoration: underline;
+    text-decoration-color: var(--color-border);
+    text-underline-offset: 4px;
+    transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.work-card h3 a:hover {
+    color: var(--color-accent);
+    text-decoration-color: var(--color-accent);
 }
 
 .work-card p {
@@ -550,6 +612,12 @@ strong {
     align-items: start;
 }
 
+.contact-brief p {
+    color: var(--color-text-light);
+    font-size: 1rem;
+    max-width: 32rem;
+}
+
 .contact-brief h3 {
     font-size: 1rem;
     font-weight: 500;
@@ -588,6 +656,86 @@ strong {
 .contact-email:hover {
     border-color: var(--color-accent);
     color: var(--color-accent) !important;
+}
+
+/* ================================
+   Case Study
+   ================================ */
+
+.case-study {
+    max-width: var(--max-width-narrow);
+    margin: 0 auto;
+    padding: calc(var(--space-xl) + 60px) var(--space-md) var(--space-xl);
+}
+
+.case-study-header {
+    margin-bottom: var(--space-lg);
+}
+
+.case-study-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    color: var(--color-text-light);
+    margin-bottom: var(--space-sm);
+}
+
+.case-study-eyebrow a {
+    color: var(--color-text-muted);
+}
+
+.case-study-eyebrow a:hover {
+    color: var(--color-accent);
+}
+
+.case-study-header h1 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+.case-study-section {
+    margin-bottom: var(--space-lg);
+}
+
+.case-study-section h2 {
+    font-family: var(--font-mono);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-sm);
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.case-study-section p {
+    font-size: 1.0625rem;
+    color: var(--color-text);
+}
+
+.case-study-note {
+    background: var(--color-bg-alt);
+    padding: var(--space-md);
+    border-left: 3px solid var(--color-border);
+}
+
+.case-study-cta {
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--space-lg);
+    margin-top: var(--space-lg);
+}
+
+.case-study-email {
+    font-family: var(--font-mono);
+    font-size: 1.125rem;
+    color: var(--color-text);
+    padding: var(--space-sm) var(--space-md);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    display: inline-block;
+    transition: all 0.2s ease;
+}
+
+.case-study-email:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
 }
 
 /* ================================
