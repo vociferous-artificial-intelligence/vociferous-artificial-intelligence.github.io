@@ -298,6 +298,13 @@ strong {
     margin: 0 auto;
 }
 
+.approach-intro {
+    max-width: var(--max-width-narrow);
+    font-size: 1.0625rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-lg);
+}
+
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -438,6 +445,7 @@ strong {
 
 .work {
     padding: var(--space-xl) var(--space-md);
+    border-top: 1px solid var(--color-border);
 }
 
 .work-inner {
