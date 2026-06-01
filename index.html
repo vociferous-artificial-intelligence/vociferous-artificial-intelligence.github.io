@@ -38,14 +38,14 @@
     <main id="main">
     <header class="hero">
         <div class="hero-content">
-            <h1>AI applications for teams past the demo.</h1>
-            <p class="hero-sub">I'm Gregory O'Connor. I work with teams that already have a workflow, partial data, and pressure to ship. I build the first useful version, make the tradeoffs visible, and stay close enough that evaluation, privacy, cost, and handoff do not become afterthoughts.</p>
-            <p class="hero-sub-tech">Most of the work right now is with Claude and OpenAI, retrieval layers, structured outputs, and evals.</p>
+            <h1>I build AI products, advise the ventures around them, and research what comes next.</h1>
+            <p class="hero-sub">I'm Gregory O'Connor. I build the first useful version of an AI product, run the venture and infrastructure diligence behind big decisions, and advise teams through launch — keeping evaluation, privacy, cost, and handoff from becoming afterthoughts.</p>
+            <p class="hero-sub-tech">Most of the hands-on build work right now is with Claude and OpenAI, retrieval layers, structured outputs, and evals.</p>
             <div class="hero-cta">
                 <a href="mailto:hello@vociferous.ai?subject=Hello" class="btn btn-primary" data-ph-cta="book_call" data-ph-cta-location="hero">Email Gregory</a>
                 <a href="mailto:hello@vociferous.ai?subject=Project%20Brief&body=What%20we're%20trying%20to%20accomplish:%0A%0AData%20and%20systems%20involved:%0A%0ATimeline%20%2B%20budget%20range:%0A%0AConstraints%20(security%2C%20compliance%2C%20stakeholders):" class="btn btn-secondary" data-ph-cta="email_brief" data-ph-cta-location="hero">Send a project brief</a>
             </div>
-            <p class="hero-note">Best fit: founders, operators, and internal teams where bad AI output costs real time, money, or trust.</p>
+            <p class="hero-note">Best fit: founders, operators, and teams where an AI product — or the decision to back one — has to hold up under real scrutiny.</p>
         </div>
     </header>
 
@@ -119,7 +119,7 @@
                     <span class="engagement-number">01</span>
                     <h3>Strategy + Architecture Sprint</h3>
                     <span class="engagement-timeline">1–2 weeks</span>
-                    <p>We look at the workflow, the data, and the existing systems, then write a build plan with explicit go/no-go gates. Not a vision document.</p>
+                    <p>I look at the workflow, the data, and the existing systems, then write a build plan with explicit go/no-go gates. Not a vision document.</p>
                 </div>
                 <div class="engagement-card">
                     <span class="engagement-number">02</span>
@@ -140,11 +140,21 @@
     <section id="work" class="work">
         <div class="work-inner">
             <h2>Recent work</h2>
+            <p class="work-intro">A mix of recent engagements — products I've built, ventures I've helped evaluate, and harder problems I'm still pushing on. Details stay confidential; these describe the capabilities, not the proprietary work.</p>
+            <ul class="re-fit-list work-overview">
+                <li><strong>AI applications and SaaS products:</strong> Scenefiend, a consumer SaaS taken from concept to a beta-ready release candidate — now in <a href="https://scenefiend.app" target="_blank" rel="noopener" data-ph-cta="scenefiend_beta" data-ph-cta-location="work_overview">private beta</a>.</li>
+                <li><strong>Fintech venture advisory:</strong> end-to-end venture diligence and go-to-market planning for a new consumer payments product. <a href="/work/fintech-venture-advisory.html" data-ph-cta="case_study_fintech" data-ph-cta-location="work_overview">Read more →</a></li>
+                <li><strong>Startup and board advisory:</strong> board advisor to NAVIA AI, a SaaS company shipping an AI executive-coaching product now in beta.</li>
+                <li><strong>Secure, distributed AI infrastructure:</strong> control-plane architecture for permissioned distributed AI workloads — coordination, telemetry, governance, and operator visibility. <a href="/work/secure-distributed-ai-training.html" data-ph-cta="case_study_distributed" data-ph-cta-location="work_overview">Read more →</a></li>
+                <li><strong>Industrial and infrastructure advisory:</strong> AI-enabled analysis spanning engineering feasibility, commercial strategy, and geopolitical-macroeconomic scenario planning. <a href="/work/industrial-infrastructure-advisory.html" data-ph-cta="case_study_industrial" data-ph-cta-location="work_overview">Read more →</a></li>
+                <li><strong>Multilingual narrative monitoring:</strong> a human-reviewed pipeline for tracking messaging themes across languages and channels.</li>
+                <li><strong>Explainable-AI research:</strong> a novel mathematical and linguistic approach aimed at more human, more explainable intelligence. <a href="/work/explainable-ai-research.html" data-ph-cta="case_study_research" data-ph-cta-location="work_overview">Read more →</a></li>
+            </ul>
             <div class="work-grid">
                 <div class="work-card">
-                    <h3><a href="/work/confidential-entertainment-ai-application.html" data-ph-cta="case_study_entertainment" data-ph-cta-location="work">Confidential entertainment-industry application — concept to release-candidate path</a></h3>
-                    <p>A recent product started as a specific entertainment-industry idea, not a chatbot wrapper. I helped shape the product, architecture, data layer, AI behavior, privacy boundaries, deployment path, and release plan together.</p>
-                    <p>The build moved from early concept to working prototype, MVP, and credible 1.0 release-candidate path in weeks. The important lesson was not speed by itself. It was that product decisions, implementation, tests, documentation, and infrastructure stayed in the same loop.</p>
+                    <h3><a href="/work/confidential-entertainment-ai-application.html" data-ph-cta="case_study_entertainment" data-ph-cta-location="work">Scenefiend — a consumer SaaS from concept to beta</a></h3>
+                    <p>Scenefiend started as a specific entertainment-industry idea, not a chatbot wrapper. I helped shape the product, architecture, data layer, AI behavior, privacy boundaries, deployment path, and release plan together, moving it from early concept to a working prototype, MVP, and a credible 1.0 release candidate in weeks.</p>
+                    <p>It is now in <a href="https://scenefiend.app" target="_blank" rel="noopener" data-ph-cta="scenefiend_beta" data-ph-cta-location="work">private beta</a>. The important lesson was not speed by itself. It was that product decisions, implementation, tests, documentation, and infrastructure stayed in the same loop.</p>
                     <ul>
                         <li>Built around authentication, personalization, a curated knowledge base, structured model outputs, evaluation paths, and privacy boundaries</li>
                         <li>Used an AI-native development workflow where product gaps surfaced through working software, not a long planning cycle</li>
@@ -152,22 +162,57 @@
                     </ul>
                 </div>
                 <div class="work-card">
-                    <h3>Distributed AI compute platform — architecture and governance from scratch</h3>
-                    <p>A startup was building a platform to coordinate AI training workloads across distributed hardware. The technical concept was promising but the founder needed someone to turn it into a real operating plan. I wrote the whole thing.</p>
+                    <h3><a href="/work/fintech-venture-advisory.html" data-ph-cta="case_study_fintech" data-ph-cta-location="work">Consumer fintech venture advisory — from idea to an investable plan</a></h3>
+                    <p>Strategic advisor to the founding team of an early-stage consumer fintech, running the full arc of venture evaluation that turns an idea into an investable plan — market sizing, technical architecture, regulatory strategy, and financial modeling.</p>
                     <ul>
-                        <li>Mapped data flows across five interconnected systems. The key insight was that the heaviest data never touches the central server, so the control layer needed to observe and govern, not relay</li>
-                        <li>Designed the governance framework: who can participate, how work is verified, how to revoke access without breaking a running job</li>
-                        <li>Wrote operator field guides, onboarding documentation, and a security progression roadmap from open alpha through sovereign deployment</li>
-                        <li>Built a phased 90-day pilot plan with explicit go/no-go gates. The founder needed to know when to keep pushing and when to stop before overcommitting</li>
+                        <li>Vendor diligence across more than ten infrastructure providers: card issuing, banking and ledgering, bank-account connectivity, identity and KYC/AML, payment operations, and analytics</li>
+                        <li>Regulatory and compliance pathway covering money-transmission licensing, BSA/AML, Reg E, and PCI DSS</li>
+                        <li>Multi-year financial and valuation scenarios alongside founder-economics, dilution, and a staged go/no-go gate framework</li>
+                    </ul>
+                </div>
+                <div class="work-card">
+                    <h3>Board advisor — NAVIA AI</h3>
+                    <p>Board advisor to NAVIA AI, a SaaS company bringing an AI executive-coaching product through beta. The work spans product direction, AI behavior and guardrails, and the path from beta to something users can rely on in high-trust moments.</p>
+                    <ul>
+                        <li>Advising on where AI should lead, where it should assist, and where a human coach stays in charge</li>
+                        <li>Helping shape the evaluation and quality signals for a product people lean on personally</li>
+                        <li>Connecting product, model behavior, and go-to-market as the company moves out of beta</li>
+                    </ul>
+                </div>
+                <div class="work-card">
+                    <h3><a href="/work/secure-distributed-ai-training.html" data-ph-cta="case_study_distributed" data-ph-cta-location="work">Secure, distributed AI infrastructure — control plane, orchestration, and governance</a></h3>
+                    <p>I advised an early-stage AI infrastructure startup on making distributed model training secure, governable, and operationally practical. The strategic call was that the value sits in the trusted control plane — coordinating approved nodes, assigning and monitoring work, and surfacing telemetry and audit to operators — not in owning the raw compute.</p>
+                    <ul>
+                        <li>Designed the control-plane architecture: node enrollment, workload assignment, telemetry, policy, contribution accounting, and audit trail, with the heaviest training traffic moving node-to-node, outside the coordinator</li>
+                        <li>Defined the security and governance model: permissioned participation, encrypted node-to-node exchange, per-task isolation, and policy-based access</li>
+                        <li>Mapped a staged hardening path from a closed alpha to self-hosted and on-prem deployments, with go/no-go gated pilots and an evidence-first go-to-market</li>
+                    </ul>
+                </div>
+                <div class="work-card">
+                    <h3><a href="/work/industrial-infrastructure-advisory.html" data-ph-cta="case_study_industrial" data-ph-cta-location="work">AI-enabled industrial and infrastructure advisory</a></h3>
+                    <p>I help clients assess industrial and infrastructure opportunities by combining AI-enabled analysis with engineering feasibility review, business-model evaluation, and geopolitical and macroeconomic scenario planning — for energy, logistics, manufacturing, and other capital-intensive sectors where success depends on more than market demand.</p>
+                    <ul>
+                        <li>Engineering feasibility and capital requirements alongside commercial and business-model evaluation</li>
+                        <li>Geopolitical and macroeconomic scenario planning: supply-chain disruption, energy-market volatility, and regulatory and strategic constraints</li>
+                        <li>Decision support on whether a project is technically executable, commercially viable, and strategically positioned</li>
                     </ul>
                 </div>
                 <div class="work-card">
                     <h3>Multilingual narrative monitoring — pipeline design for public communications</h3>
                     <p>Designed a system to track how messaging themes evolve across languages and channels. The client needed signal, not surveillance.</p>
                     <ul>
-                        <li>We kept a human editorial layer because full automation would have produced more false confidence than useful insight</li>
+                        <li>I kept a human editorial layer because full automation would have produced more false confidence than useful insight</li>
                         <li>Focused the system on trend clarity and responsible framing, not "gotcha" classification</li>
-                        <li>We cut the first version to theme tracking and source comparison. Trying to infer intent across languages this early would have created more noise than signal</li>
+                        <li>I cut the first version to theme tracking and source comparison. Trying to infer intent across languages this early would have created more noise than signal</li>
+                    </ul>
+                </div>
+                <div class="work-card">
+                    <h3><a href="/work/explainable-ai-research.html" data-ph-cta="case_study_research" data-ph-cta-location="work">Explainable-AI research — toward more human, more explainable intelligence</a></h3>
+                    <p>Alongside client work, I'm developing a novel mathematical and linguistic approach to AI: one aimed at reasoning that can be inspected by construction, and at generalization that feels more human than today's black-box models.</p>
+                    <ul>
+                        <li>Grounded in mathematical and linguistic structure rather than scale alone</li>
+                        <li>Aimed at explanations that are intrinsic to the computation, not reconstructed after the fact</li>
+                        <li>Early-stage research — described here in capability terms, with methods and results kept private</li>
                     </ul>
                 </div>
             </div>
@@ -186,7 +231,7 @@
         <div class="about-inner">
             <h2>About</h2>
             <p>I'm Gregory O'Connor. I build AI systems that have to hold up outside the demo. The work I like sits where product judgment and model behavior stop being separate problems.</p>
-            <p>MIT-trained Ph.D., based in New York. I've been building technical systems for a long time. Recent work includes a confidential entertainment-industry AI application and advisory work with an AI startup.</p>
+            <p>MIT-trained Ph.D., based in New York. I've been building technical systems for a long time. Recent work includes Scenefiend, a consumer SaaS now in private beta; venture advisory to an early-stage consumer fintech; and a board-advisor role at NAVIA AI.</p>
             <p>I'm usually most useful when a team has a real workflow, partial data, and pressure to ship before the system is fully understood.</p>
             <div class="about-links">
                 <a href="https://linkedin.com/in/gregory-oconnor" target="_blank" rel="noopener" data-ph-cta="linkedin" data-ph-cta-location="about">LinkedIn</a>

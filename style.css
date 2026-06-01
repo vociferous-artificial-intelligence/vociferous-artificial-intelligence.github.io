@@ -445,6 +445,18 @@ strong {
     margin: 0 auto;
 }
 
+.work-intro {
+    max-width: var(--max-width-narrow);
+    font-size: 1.0625rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-md);
+}
+
+.work-overview {
+    max-width: var(--max-width-narrow);
+    margin-bottom: var(--space-lg);
+}
+
 .work-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
