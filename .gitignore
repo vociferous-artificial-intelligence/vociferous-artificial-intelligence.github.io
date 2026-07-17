@@ -1,2 +1,28 @@
-# Local-only working data; never committed
+# Local-only working data; never committed or deployed
 personal_ignore/
+.worktoday/
+
+# Local secrets and machine-specific configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local archives and working databases
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.db
+*.sqlite
+*.sqlite3
+
+# Operating-system and editor artifacts
+.DS_Store
+Thumbs.db
+*.swp
+*.tmp
+*.bak
