@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research — before a score means anything, the answer key has to be right · Vociferous AI</title>
+    <meta name="description" content="Evaluation-integrity research by Gregory O'Connor: auditing the answer keys that AI benchmarks are graded against. Six method commitments, two benchmark audits in law and medication safety under peer review, and three engagements built on the method.">
+    <link rel="canonical" href="https://vociferous.ai/research">
+    <meta name="robots" content="index,follow">
+    <meta property="og:title" content="Research — before a score means anything, the answer key has to be right · Vociferous AI">
+    <meta property="og:description" content="Almost all evaluation effort goes into the model. Almost none goes into the thing the model is graded against. Method, two audits under peer review, and the engagements built on them.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://vociferous.ai/research">
+    <meta property="og:site_name" content="Vociferous AI">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Research — before a score means anything, the answer key has to be right · Vociferous AI">
+    <meta name="twitter:description" content="Almost all evaluation effort goes into the model. Almost none goes into the thing the model is graded against. Method, two audits under peer review, and the engagements built on them.">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="/analytics.js" defer></script>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="/" class="nav-logo">Vociferous AI</a>
+            <div class="nav-links">
+                <a href="/#work">Work</a>
+                <a href="/research">Research</a>
+                <a href="/#approach">How I work</a>
+                <a href="/about">About</a>
+                <a href="/#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main">
+    <article class="case-study">
+        <header class="case-study-header">
+            <p class="case-study-eyebrow"><a href="/" data-ph-cta="research_back" data-ph-cta-location="research_page">← Vociferous AI</a> · Research</p>
+            <h1>Before a score means anything, the answer key has to be right</h1>
+        </header>
+
+        <section class="case-study-section">
+            <h2>The claim</h2>
+            <p>Almost all evaluation effort goes into the model. Almost none goes into the thing the model is graded against.</p>
+            <p>That asymmetry is harmless until a score starts deciding something — whether a system ships, whether an agent is allowed near a clinical or legal workflow, whether a vendor's accuracy claim survives diligence. At that point the answer key stops being a data file and becomes load-bearing infrastructure. It is usually the one component nobody has checked.</p>
+            <p>I check it.</p>
+        </section>
+
+        <section class="case-study-section">
+            <h2>Why this is a real failure mode, not a hygiene issue</h2>
+            <p>A wrong key on a capability benchmark mismeasures. A wrong key on a <strong>safety</strong> benchmark can invert.</p>
+            <p>If an item's designated correct answer is the action the benchmark was built to discourage, then the unsafe choice scores correct and a model that refuses it scores wrong. A leaderboard containing items like that is partly ranking models by their willingness to do the thing you are testing for. The score doesn't go fuzzy — it points the other way.</p>
+            <p>Three properties make this class of defect worth specialist attention.</p>
+            <p><strong>No amount of model-side testing finds it.</strong> The defect sits upstream of every model you evaluate. Better models don't surface it; they just score differently against the same wrong target.</p>
+            <p><strong>It propagates.</strong> Benchmarks are increasingly generated from a rule applied to a structured source, rather than written item by item. One flawed rule can seed a defect across hundreds of items, all of which look individually plausible.</p>
+            <p><strong>Below-chance accuracy is usually read as a fact about models.</strong> Sometimes it is a fact about the items. When a whole field of systems performs worse than guessing on a subset, that result should trigger an item audit before it licenses any conclusion about capability.</p>
+        </section>
+
+        <section class="case-study-section">
+            <h2>How the work is done</h2>
+            <p>Six commitments, and each one costs something. That is how you tell them from marketing.</p>
+            <p><strong>1. The model stays off the measurement path.</strong> Labels are re-derived from primary authority — statute, rule of evidence, drug labeling — encoded as executable predicates and applied to each item's own structured fields. The published answer key is never read during derivation; a regression test fails if it is even reachable from the derivation path. Agreement is computed afterwards, as a diagnostic. The result is that no model's mistakes can be confused with the data's, and there is no detection threshold to tune.</p>
+            <p><strong>2. Census, not sample.</strong> Where the precondition holds, every item is checked, not a sampled subset. The counts are exact. There is no confidence interval to argue about and no selection procedure to defend.</p>
+            <p><strong>3. Evidence is graded, and grades are never summed.</strong> A deterministic match, an authored interpretation, a primary-source grounding, and a case held for expert adjudication are four different kinds of thing. They stay four separate records through to the final report.</p>
+            <p>This is the commitment that actually costs. In one audit it kept a large family of screened items classified as a <em>screen</em> rather than a <em>finding</em> — which is to say I declined to roughly triple the headline number I could have reported, because automatic matching alone supplies no warrant for that promotion. An aggregate count looks equally precise whether or not the evidence behind it is uniform. Keeping the grades apart is the only thing that stops the output of a matcher from becoming a defect count by default.</p>
+            <p><strong>4. The method's reach is derived, not asserted.</strong> Rather than claim general applicability, I classify the entire population against the method's hard precondition and report what fraction it actually reaches — including when the honest answer is a small one. Bounding a method by derivation is less flattering than bounding it by adjective, and considerably more useful to whoever has to decide whether it applies to them.</p>
+            <p><strong>5. The human is named where the human is load-bearing.</strong> Both audits stop at the point where a licensed expert is required, and say so plainly. Additional model readers do not substitute for an attorney or a clinician; they can only map where the disagreement lives and how stable it is. Expert review is not a compliance step appended to the end of the work — it is the mechanism by which the work's ceiling moves. An expert who narrows or widens an encoded rule changes what the check can see, and every number recomputes from the same committed artifacts.</p>
+            <p><strong>6. Everything that produced a result is attestable.</strong> Protocols and analysis plans are hashed before first use. Every model read is recorded with its request and its response. Every read-producing artifact carries the model identifier <em>as served</em>, the harness or runner version, whatever sampling settings the caller can observe, and the timestamp of the write. I work with AI agents on implementation and coding, and the same rule covers them.</p>
+            <p>That last requirement came out of getting it wrong. An earlier round of reads recorded the harness name and a date — which names a tool, not a model. Establishing which model had actually read what took a forensic recovery from session transcripts on the original host, using records never designed for the purpose. The lesson generalizes past my own work: a role that touches no recorded call path leaves no record of itself. If you are running agent fleets and your audit trail names the runner instead of the model, you do not have an audit trail.</p>
+        </section>
+
+        <section class="case-study-section case-study-note">
+            <h2>Two audits, under peer review</h2>
+            <p><strong>A legal-reasoning benchmark.</strong> A full re-derivation of gold labels for every item in a widely used legal benchmark's rule-governed tasks, from primary authority, with the answer key sealed off from the derivation. The audit is largely a confirmation — which is the harder result to publish and the more useful one to have. It also locates precisely where deterministic validation stops and trained legal judgment has to take over.</p>
+            <p><strong>A medication-safety benchmark.</strong> A structural audit of a public clinical-safety benchmark whose documented construction rule infers that a drug is safe from the absence of a recorded risk. The audit shows what that inference does not guarantee, measures how often the gap is realized across the whole benchmark, and proposes a quarantine-and-review workflow that separates what a maintainer can fix mechanically from what requires a clinician.</p>
+            <p><em>Both papers are under peer review. Titles, venue, and full findings are available on request under NDA, and will be published here when the decisions land.</em></p>
+        </section>
+
+        <section class="case-study-section">
+            <h2>What this is for</h2>
+            <p>Three ways this shows up in client work. They mirror the sprint structure on the <a href="/#engagements" data-ph-cta="research_engagements" data-ph-cta-location="research_page">home page</a>.</p>
+            <p><strong>Evaluation Audit — 1–2 weeks.</strong> You have an eval suite or a vendor benchmark that a decision depends on. I establish whether its key is sound, whether its items measure what they are named for, and whether any of its results are artifacts of the items rather than the models. You get a graded findings register, not a suspicion ranking.</p>
+            <p><strong>Gold-Standard Design — 2–4 weeks.</strong> You need a keyed evaluation set in a domain where being wrong is expensive. I build it against primary authority with per-item provenance, machine-checkable field semantics, and an explicit statement of the gap between the rule as stated and the doctrine it abbreviates — so that downstream consistency checks can see what they are and are not covering.</p>
+            <p><strong>Evidence &amp; Provenance Design — 2–4 weeks.</strong> You are running AI-assisted review and need a defensible chain of custody from automatic detection to human decision. I design the boundary: what is mechanizable, what is an authored interpretation, what must be adjudicated by a named expert, and what has to be attestable afterwards. This is the part that decides whether your process survives a regulator, an auditor, or a deposition.</p>
+        </section>
+
+        <section class="case-study-section case-study-cta">
+            <h2>If a decision depends on a score</h2>
+            <p>If you are about to ship, buy, or defend an AI system on the strength of an evaluation — and nobody has checked what it is graded against — send the details.</p>
+            <p><a href="mailto:hello@vociferous.ai?subject=Evaluation%20audit%20brief&body=The%20evaluation%20or%20benchmark%20a%20decision%20depends%20on:%0A%0AWhat%20the%20score%20decides:%0A%0ADomain%2C%20and%20who%20the%20expert%20reviewers%20would%20be:%0A%0ATimeline%20and%20constraints:" class="case-study-email" data-ph-cta="research_email" data-ph-cta-location="research_page">hello@vociferous.ai</a></p>
+        </section>
+    </article>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <span class="footer-logo">Vociferous AI</span>
+            <span class="footer-copy">© 2026</span>
+        </div>
+    </footer>
+</body>
+</html>

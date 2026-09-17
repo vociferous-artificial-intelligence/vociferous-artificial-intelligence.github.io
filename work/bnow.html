@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BNOW.NET — source-grounded public intelligence · Vociferous AI</title>
-    <meta name="description" content="BNOW.NET is a source-grounded application for analysts working with fast-moving public information and a potential future data source for high-accountability analysis.">
+    <title>BNOW.NET — a source-grounded intelligence product, built and taken to market · Vociferous AI</title>
+    <meta name="description" content="BNOW.NET is a live, self-running public-source intelligence product: continuous collection, data-derived source reliability, claims traceable to their evidence by database constraint, and a public daily accuracy scoreboard. Built end to end, with the market, pricing, and licensing work around it.">
     <link rel="canonical" href="https://vociferous.ai/work/bnow.html">
     <meta name="robots" content="index,follow">
-    <meta property="og:title" content="BNOW.NET — source-grounded public intelligence · Vociferous AI">
-    <meta property="og:description" content="A source-grounded application for analysts working with fast-moving public information.">
+    <meta property="og:title" content="BNOW.NET — a source-grounded intelligence product, built and taken to market · Vociferous AI">
+    <meta property="og:description" content="BNOW.NET is a live, self-running public-source intelligence product: continuous collection, data-derived source reliability, claims traceable to their evidence by database constraint, and a public daily accuracy scoreboard. Built end to end, with the market, pricing, and licensing work around it.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://vociferous.ai/work/bnow.html">
     <meta property="og:site_name" content="Vociferous AI">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="BNOW.NET — source-grounded public intelligence · Vociferous AI">
-    <meta name="twitter:description" content="A source-grounded application for analysts working with fast-moving public information.">
+    <meta name="twitter:title" content="BNOW.NET — a source-grounded intelligence product, built and taken to market · Vociferous AI">
+    <meta name="twitter:description" content="BNOW.NET is a live, self-running public-source intelligence product: continuous collection, data-derived source reliability, claims traceable to their evidence by database constraint, and a public daily accuracy scoreboard. Built end to end, with the market, pricing, and licensing work around it.">
     <link rel="stylesheet" href="/style.css">
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -29,6 +29,7 @@
             <a href="/" class="nav-logo">Vociferous AI</a>
             <div class="nav-links">
                 <a href="/#work">Work</a>
+                <a href="/research">Research</a>
                 <a href="/about">About</a>
                 <a href="/#contact">Contact</a>
             </div>
@@ -39,37 +40,76 @@
     <article class="case-study">
         <header class="case-study-header">
             <p class="case-study-eyebrow"><a href="/#work" data-ph-cta="case_study_back" data-ph-cta-location="case_study_bnow">← Selected work</a></p>
-            <h1>BNOW.NET — source-grounded public intelligence</h1>
+            <h1>BNOW.NET — a source-grounded intelligence product, built and taken to market</h1>
         </header>
 
         <section class="case-study-section case-study-note">
-            <h2>What this is</h2>
-            <p><a href="https://bnow.net/" target="_blank" rel="noopener" data-ph-cta="bnow_app" data-ph-cta-location="case_study_bnow">BNOW.NET</a> is an application for analysts working with fast-moving public information. This page describes the public product direction without disclosing private sources, credentials, ingestion details, or internal analysis.</p>
+            <h2>Status</h2>
+            <p><a href="https://bnow.net/" target="_blank" rel="noopener" data-ph-cta="bnow_app" data-ph-cta-location="case_study_bnow">BNOW.NET</a> is live and runs on its own. Every day it collects public information across several channels, extracts claims that stay attached to the documents they came from, publishes analyst digests four times a day, and scores its own output against expert human analysis in public. No one touches it for that to happen.</p>
+            <p>It operates as a private, invite-only analyst beta — a deliberate posture, not a limitation of the build. I did the application work and the venture work: architecture and implementation, but also market analysis, positioning, pricing design, licensing strategy, legal posture, and launch sequencing. This page describes the product and the approach. Sources, credentials, internal analysis, and private methodology stay private.</p>
         </section>
 
         <section class="case-study-section">
             <h2>The problem</h2>
-            <p>When events move quickly, the difficulty is not finding another stream of updates. It is keeping claims connected to their sources, comparing evidence across channels, and preserving enough context for a person to decide what deserves attention.</p>
+            <p>When events move quickly, the shortage is not information. It is trust and traceability. An analyst working a fast-moving situation gets more material than any person can read, from sources of wildly uneven reliability, arriving faster than anyone can verify. The work that actually matters — deciding which claims deserve weight, comparing accounts across channels, and being able to show a colleague or a regulator exactly where a conclusion came from — is the part no feed does for you.</p>
+            <p>Most tools in this category answer with more volume, or with conclusions you are asked to take on faith. Neither helps someone who has to defend a judgment later.</p>
         </section>
 
         <section class="case-study-section">
-            <h2>The product direction</h2>
-            <p>BNOW.NET is built around source-grounded analysis: organize public information, retain links back to evidence, and give an analyst a clearer path from an emerging signal to the material behind it. Human judgment remains responsible for interpretation.</p>
+            <h2>The wedge</h2>
+            <p>The product is built on a single commitment: <strong>every number is clickable to its evidence, and the system publishes its own accuracy.</strong> That commitment produces three things competitors do not pair.</p>
+            <p><strong>Source-reliability ratings derived from data, not editorial opinion.</strong> How often a source is actually relied upon in the public record of expert analysis, how carefully each reference to it is hedged, and whether it is being cited less over time.</p>
+            <p><strong>Traceability enforced by the database.</strong> A claim cannot be written without a link to the document that supports it. The rule lives in a Postgres constraint, not in application code someone can route around.</p>
+            <p><strong>A public daily scoreboard.</strong> The system's output is compared against expert published analysis every day, and the comparison is published whether it flatters the product or not. In the measured backtest, the median information lead over the expert baseline was about 14 hours.</p>
         </section>
 
         <section class="case-study-section">
-            <h2>A future relationship to Epistemic</h2>
-            <p>BNOW.NET may become a data source for future Epistemic analysis and provides a concrete defense-oriented example of the kinds of high-accountability systems that work may support. The projects are separate today; this is a possible future relationship, not a claim of current integration.</p>
+            <h2>What it does</h2>
+            <p><strong>A source-reliability registry.</strong> Roughly ten thousand distinct sources, scored from around 350,000 observed citations across four years of published expert analysis. The score is a function of how the public record treats each source — frequency, recency, decay, and the degree of hedging attached to each mention — so an analyst can see <em>why</em> a source is weighted the way it is instead of being handed a rating.</p>
+            <p><strong>Continuous collection.</strong> Dozens of news feeds, registry-selected Telegram channels, X accounts chosen by the registry itself rather than by hand, and global event data, pulled on a fifteen-minute cycle and de-duplicated by content hash. One stream alone has contributed more than 175,000 documents.</p>
+            <p><strong>Analysis that cannot lose its evidence.</strong> A map/reduce claims engine reads the incoming corpus and produces four digests a day per theater. Claims carry their sources through every stage. Where a language model is used, it sits behind a provider-neutral seam with a deterministic fallback, so a vendor outage or an exhausted budget degrades the product instead of breaking it.</p>
+            <p><strong>Public self-scoring.</strong> Daily comparison against ISW's published assessments — coverage, divergence, and timing — using derived signatures rather than anyone else's prose.</p>
+            <p><strong>Analyst surfaces on top.</strong> An entity graph, automated signals, a trade-evasion watch, a critical-materials tracker, a tracker for sources that have gone dark, free claim search, and a question-answering pipeline that costs about a penny per query and runs under hard spend caps.</p>
+            <p>Live coverage is Russia/Ukraine and Iran, with Gulf theaters ingesting.</p>
+        </section>
+
+        <section class="case-study-section">
+            <h2>What the build demonstrates</h2>
+            <p>This is the part of the work that generalizes to other data-intensive applications.</p>
+            <p><strong>Invariants belong where they cannot be bypassed.</strong> The claim-to-source rule is a database constraint. Spend limits are enforced in a single dispatch gate that fails closed. Model selection for every workload resolves through one routing authority rather than scattered environment variables. When a rule matters, the goal is to make violating it impossible rather than discouraged.</p>
+            <p><strong>Tested like something that has to run unattended.</strong> More than 4,500 automated tests across roughly 290 files, plus an integration suite that runs against a disposable copy of the production database, behind a pre-push gate that will not let a red build reach the main branch.</p>
+            <p><strong>Money is a first-class design constraint.</strong> Every paid path — language models, data APIs, enrichment — is metered and capped, with a kill switch. The whole platform, live ingestion and analysis included, runs for roughly $200–300 a month. That number is a design result, not an accident: it is what makes an unfunded product able to operate continuously while its market question is still open.</p>
+            <p><strong>Observability judged by what it hides.</strong> A background worker once starved against a budget backstop and kept reporting healthy for over two weeks while quietly producing nothing. The repair was not just the worker: budget stops now mark runs as failed, per-theater freshness alerts exist, and the affected stretch of scored history is footnoted rather than quietly re-baselined. The interesting question about a monitoring system is not what it reports — it is what it can fail to report.</p>
+            <p><strong>Built to the standards the buyer's own analysts use.</strong> The product publishes a methodology page mapping what it does to established intelligence-community practice — how confidence is expressed, how sources are characterized, how citations are formed. In a market where the objection is "why should I trust an automated assessment," the answer that works is not a better demo. It is conforming to the conventions the buyer already audits against, and saying so in public.</p>
+            <p><strong>Regulatory and legal constraints designed in.</strong> Collection is rate-limited and robots-respecting, caching prevents refetching, and no third-party article text appears in user-facing output — only URLs, classifications, counts, and scores. Presentation of any data whose commercial rights are unresolved is restricted at the code level until those rights land.</p>
+        </section>
+
+        <section class="case-study-section">
+            <h2>What the venture work demonstrates</h2>
+            <p>The software is roughly half the work. The other half is the set of decisions that determine whether building it was worth doing.</p>
+            <p><strong>Bottom-up sizing instead of a top-down number.</strong> The category's headline figures run to tens of billions, which tells you nothing actionable. The plan sizes the specific slice this product can credibly serve — six buyer segments, addressable account counts, realistic per-account revenue — and arrives at roughly $138M. That is the number worth arguing about, and it is the one that survives a diligence conversation.</p>
+            <p><strong>Ranked buyers, and a beachhead re-sequenced under a real constraint.</strong> The highest-willingness-to-pay buyer was compliance. When the data-rights position underneath that buyer's decisive feature turned out to be unresolved, the feature was restricted and the beachhead was re-sequenced to the buyers that could be served honestly today, with compliance re-promoted the moment rights land. Discovering that a segment is not yet sellable is a finding, not a failure — provided the go-to-market moves in response.</p>
+            <p><strong>A pricing mechanism chosen on evidence.</strong> Per-seat pricing suits neither how intelligence is consumed nor a product whose central IP risk is redistribution. The recommendation is a per-organization site license with usage pricing confined to the API layer — the hybrid the enterprise data market has converged on. The remaining packaging question is named explicitly as the gate ahead of any priced conversation rather than papered over with a plausible-looking price list.</p>
+            <p><strong>Defensibility analyzed honestly.</strong> The output is text, and text is copyable. So the moats are structural: a live scored feed that is stale within hours of being lifted, an accuracy record that would take months of running the same pipeline to reproduce, and a reliability registry built from four years of accumulated behavior. Those are backed by the controls that data businesses actually use — licensing rights separated by use, per-account entitlements, per-subscriber fingerprinting before any embedding deal — rather than by DRM theater.</p>
+            <p><strong>Legal and consent shipped before selling, not after.</strong> Versioned terms and privacy clickwrap with forced re-acceptance, append-only acceptance records, opt-in-only analytics. These are cheap when built early and expensive to retrofit under a customer's security review.</p>
+            <p><strong>A team plan aimed at the binding constraint.</strong> The constraint on this product is not engineering capacity — it is credibility and distribution. So the hiring sequence leads with regional analysts who both verify the output and sell it, because in this market analysts buy from analysts, and one such hire does three jobs.</p>
+            <p><strong>A commercial posture chosen deliberately.</strong> Invite-only sign-in, no prices displayed, an access queue that doubles as the founding-subscriber list. The point of a private beta is to learn what to charge for before charging for it.</p>
+        </section>
+
+        <section class="case-study-section">
+            <h2>Where it stands</h2>
+            <p>Live, self-running, and in private beta with design partners being onboarded by hand. The scoreboard is public and reports coverage and divergence daily, including the days the system falls short of its own roadmap target — which is the point of publishing it.</p>
         </section>
 
         <section class="case-study-section">
             <h2>What this illustrates</h2>
-            <p>Data-intensive applications need product judgment as much as infrastructure. Source quality, evidence presentation, analyst workflow, uncertainty, and the boundaries of automation all have to be designed together.</p>
+            <p>Building the application and running the venture are not separable problems. Source quality is a product decision and a cost decision. Traceability is an engineering invariant and the sales argument. An unresolved data-licensing question is simultaneously a code-level restriction, a go-to-market sequencing change, and a line in the plan. Held in one loop, those decisions inform each other. Split across a builder and a strategist, they tend to arrive as surprises.</p>
+            <p>That loop is what I offer: I can take an opportunity from market analysis through architecture, implementation, evaluation, and launch, and keep the technical choices answerable to the business ones the whole way.</p>
         </section>
 
         <section class="case-study-section case-study-cta">
             <h2>If this sounds useful</h2>
-            <p>If your team needs a source-grounded application for complex, fast-moving information, send the workflow.</p>
+            <p>If you are building something where accuracy, provenance, and cost all have to hold at once — or you have an opportunity and need someone who can both assess it and build it — send the workflow.</p>
             <p><a href="mailto:hello@vociferous.ai?subject=Source-grounded%20application%20brief&body=What%20we're%20trying%20to%20accomplish:%0A%0AData%20and%20systems%20involved:%0A%0AUsers%20and%20decisions:%0A%0AConstraints%20(security%2C%20compliance%2C%20stakeholders):" class="case-study-email" data-ph-cta="case_study_email" data-ph-cta-location="case_study_bnow">hello@vociferous.ai</a></p>
         </section>
     </article>

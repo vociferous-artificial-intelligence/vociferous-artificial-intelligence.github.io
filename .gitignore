@@ -2,6 +2,11 @@
 personal_ignore/
 .worktoday/
 
+# Internal draft copy and confidential source material (investor one-pager,
+# held research case studies, client contribution review). This repo is served
+# publicly by GitHub Pages, so this folder must never be committed.
+suggestions/
+
 # Local secrets and machine-specific configuration
 .env
 .env.*

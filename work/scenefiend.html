@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SceneFiend.app — a full consumer product, built solo at team pace · Vociferous AI</title>
+    <meta name="description" content="SceneFiend is a built and running AI product for actors — grounded scene and monologue recommendations, a curated metadata-only library, and a saved book — developed solo in six months on an AI-native workflow.">
+    <link rel="canonical" href="https://vociferous.ai/work/scenefiend.html">
+    <meta name="robots" content="index,follow">
+    <meta property="og:title" content="SceneFiend.app — a full consumer product, built solo at team pace · Vociferous AI">
+    <meta property="og:description" content="A built and running AI product for actors, developed solo in six months on an AI-native workflow, with a rights model enforced in code.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://vociferous.ai/work/scenefiend.html">
+    <meta property="og:site_name" content="Vociferous AI">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="SceneFiend.app — a full consumer product, built solo at team pace · Vociferous AI">
+    <meta name="twitter:description" content="A built and running AI product for actors, developed solo in six months, with a rights model enforced in code.">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="/analytics.js" defer></script>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="/" class="nav-logo">Vociferous AI</a>
+            <div class="nav-links">
+                <a href="/#work">Work</a>
+                <a href="/research">Research</a>
+                <a href="/about">About</a>
+                <a href="/#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main">
+    <article class="case-study">
+        <header class="case-study-header">
+            <p class="case-study-eyebrow"><a href="/#work" data-ph-cta="case_study_back" data-ph-cta-location="case_study_scenefiend">← Selected work</a></p>
+            <h1>SceneFiend.app — a full consumer product, built solo at team pace</h1>
+        </header>
+
+        <section class="case-study-section case-study-note">
+            <h2>Status</h2>
+            <p><a href="https://scenefiend.app/" target="_blank" rel="noopener" data-ph-cta="scenefiend_app" data-ph-cta-location="case_study_scenefiend">SceneFiend.app</a> is built and running. Actors sign in, describe the room they are walking into, and get scene and monologue picks with a stated reason for each one; they can browse a curated library by playwright, era, cast size, and tone, open a page for any piece, and keep what they like in a saved book they rehearse from.</p>
+            <p>It is open as a small actor beta behind a waitlist, with a public, indexable landing page. That is a deliberate posture. The product is further along than the cohort is wide, and the gates that decide when it widens are content rights and recommendation quality, not appetite.</p>
+            <p>I built and run all of it — product definition, architecture, implementation, evaluation, content policy, infrastructure, brand, and release sequencing. This page describes the system and the way it was built. User data, private evaluation detail, and unreleased product mechanics stay private.</p>
+        </section>
+
+        <section class="case-study-section">
+            <h2>The problem</h2>
+            <p>Actors do not have a shortage of plays. They have a selection problem under deadline.</p>
+            <p>The material has to fit a specific person — playing age, type, training, what they are trying to prove in that particular room — and it has to be findable in the hour before it is needed. The existing options are a list of the same forty overdone monologues, a search box over a catalogue with no opinion about fit, or a friend who happens to know a play. The part that takes judgment — <em>is this piece right for me, right now, for this audition</em> — is the part nothing helps with.</p>
+            <p>A general-purpose chatbot answers this badly in a specific way: it will name a play with total confidence, invent a character who is not in it, and cheerfully recommend the most overdone monologue in the American theater. Confidence without sourcing is worse than no answer here, because the actor finds out in the room.</p>
+        </section>
+
+        <section class="case-study-section">
+            <h2>The product decision everything else follows from</h2>
+            <p><strong>SceneFiend widens the field. It does not pick for you.</strong></p>
+            <p>That sentence is a product constraint with architectural consequences, and it was settled before the recommendation engine was written.</p>
+            <p>It means the system returns candidates the actor then goes and reads, researches, and judges — with the reasoning shown, so the actor can disagree with it. It means a piece that was chosen by nothing more than a default says so on the card, in those words, instead of manufacturing a personalization story. It means the product's own copy is audited against what the system can actually justify, and language that implies the machine has taste the actor should defer to is treated as a defect.</p>
+            <p>It is also why the recommendations are grounded in a curated corpus rather than drawn from a model's memory. The model reasons over a candidate set the system controls; anything it proposes from outside that set is labelled as unverified rather than presented as a find. A tool for a craft should make its user better at choosing, not train them to outsource the choice.</p>
+        </section>
+
+        <section class="case-study-section">
+            <h2>What is built</h2>
+            <p>A full consumer application, not a prototype with a demo path.</p>
+            <p><strong>For actors.</strong> Onboarding that reaches a first useful result in under a minute, including a "pick three" taste seed for people the system knows nothing about yet. Scene and monologue requests with tuning for era, tone, and length. Result cards with fit rationale in the actor's own vocabulary — the framing shifts with the training tradition they identify with, because a Meisner-trained actor and a British-classical actor do not want the same sentence about the same speech. A browsable library by playwright, era, cast, and tone. Public, shareable piece pages. A saved book with prep states, due dates, notes, printing, and private share links. History, collections, and a four-tab mobile shell, because these users are on phones.</p>
+            <p><strong>For operators and expert reviewers.</strong> The half of the product no one sees: a curation workbench with review queues and coverage reporting, subject-matter-expert invitations and review packets, source-URL verification, a suggestion and feedback pipeline, health and monitoring dashboards, and internal statistics behind an allowlist. A curated library is an editorial operation. Building only the consumer surface is how a recommendation product ends up with nothing good to recommend.</p>
+            <p><strong>Underneath.</strong> Next.js App Router and TypeScript on Vercel, Postgres, hosted model APIs, Playwright, and GitHub Actions. Roughly 77 routes, 149 components, 372 library modules, and 68 database migrations.</p>
+        </section>
+
+        <section class="case-study-section">
+            <h2>Rights are architecture, not a disclaimer</h2>
+            <p>A product that points actors at plays is a product that handles other people's copyrighted work. That is a legal question, a product question, and a schema question at the same time, so it was settled as one.</p>
+            <p>Every piece in the library carries a rights posture, and the posture decides what the system will do with it. <strong>Metadata-only</strong> means SceneFiend describes the piece in its own words and points to where to buy or borrow it; <strong>excerpt-linked</strong> means a vetted source may show an excerpt and SceneFiend links out rather than copying; <strong>full-text-owned</strong> means public-domain status, ownership, or written permission has been verified for that specific text and edition; <strong>unknown</strong> means the row is not public at all.</p>
+            <p>The posture is enforced where it cannot be argued with. Only metadata-only rows are eligible for the sitemap, for public playwright pages, and for public share links — constants in the code, not a reviewer's habit. Scene text that does pass the gate is served through a SceneFiend-controlled route from an asset store that can be switched off in one move, so a takedown is an action rather than a deployment. Every content surface carries a report path with a rights and DMCA option.</p>
+            <p>Two consequences are worth naming, because they are the kind of thing that gets discovered late:</p>
+            <ul class="re-fit-list">
+                <li><strong>Scene text mostly does not belong in the application repository.</strong> A commit is trivially mirrored, forked, cached, and quoted; deleting the file later does not remove it from public history. So the repo holds scene bodies only in a narrow, rights-cleared lane, with the edition, adaptation status, reviewer, review date, rights basis, and permitted display scope recorded beside the file. Everything else lives behind the kill switch.</li>
+                <li><strong>AI drafts, humans decide rights.</strong> Model-generated metadata and summaries enter a review queue. No automated process is permitted to set a rights posture or publish unreviewed generated content about a work.</li>
+            </ul>
+            <p>None of this is visible to an actor, which is the point. It is also the difference between a library you can grow and one you have to take down.</p>
+        </section>
+
+        <section class="case-study-section">
+            <h2>Trust inside the machine</h2>
+            <p>The interesting failures in an AI product are not outages. They are the times it is confidently, invisibly wrong.</p>
+            <p><strong>Actor-typed text is never trusted as instruction.</strong> Everything a user types — goals, tone constraints, context about the room — is wrapped in isolation blocks inside the prompt, with closing tags neutralized, so a profile field cannot become a command. System-authored fallback copy renders inline, outside those blocks, and the two are never confused.</p>
+            <p><strong>Empty signals say they are empty.</strong> With no profile, no taste history, and no saved work, the prompt renders authored fallbacks that instruct breadth instead of inventing a preference, ranking sliders sit at neutral where they bias nothing and filter nothing, and the first card shows a "working with defaults" marker rather than a fabricated "we chose this for you." All four layers are pinned by deterministic tests that run without a network or a model.</p>
+            <p><strong>Ranking narrows nothing.</strong> Every signal is an additive boost or a soft dampener, never a filter, with diversity caps that hold a single work or author from taking over a result set. The actor's field of candidates gets ordered, not cut.</p>
+            <p><strong>Spend is a design constraint.</strong> Daily request caps per account plus daily and monthly budget ceilings with alert thresholds and per-model cost accounting, all configurable at the environment level. A generation path that can be run by strangers needs a cost ceiling before it needs a launch date.</p>
+            <p><strong>Grounding and output shape are verified, not hoped for.</strong> Structured outputs, versioned prompts, recorded provider and model metadata per result, contract-violation detection, and an evaluation harness with seed prompts, adversarial fixtures, run comparison, and classification of findings — with roughly seventy recorded evaluation artifacts to compare against. You cannot tell whether a prompt change helped without something to diff it against.</p>
+        </section>
+
+        <section class="case-study-section">
+            <h2>How it was actually built</h2>
+            <p>This is the part that generalizes, and it is the reason this project is on this page.</p>
+            <p>SceneFiend was built by one person, on an AI-native workflow, at a pace I would otherwise associate with a funded early team running product, engineering, QA, documentation, infrastructure, and release planning in parallel. Just over a thousand commits have landed on the main branch since March 2026, referencing more than six hundred distinct tracked issues, against a documentation set of some 488 markdown files that is treated as part of the build rather than a write-up after it.</p>
+            <p>That pace comes from a purpose-built harness for unattended multi-agent work, not from typing faster:</p>
+            <ul class="re-fit-list">
+                <li><strong>One git worktree per lane</strong>, with disjoint path ownership declared up front. A lane that needs a new path gets it added before the run starts, rather than explaining the collision afterward.</li>
+                <li><strong>A fresh agent invocation per issue</strong>, so no single session accumulates the context rot that makes long autonomous runs go strange around hour three.</li>
+                <li><strong>Validation owned per issue and again per lane</strong>, with file locks around the expensive shared commands so parallel lanes cannot trample each other's builds.</li>
+                <li><strong>Branch pushes and draft pull requests — never direct pushes to main.</strong> Overnight work arrives as reviewable proposals.</li>
+                <li><strong>Sentinel pause files and a supervisor</strong>, so a degrading run stops itself instead of producing eight hours of confident damage.</li>
+                <li><strong>A planner that reconciles the issue tracker against the lane configuration</strong> before a large run, and reports what is unqueued, blocked, or already covered by work in flight.</li>
+            </ul>
+            <p>The honest summary of the leverage: agents are very good at producing volume and indifferent to whether the volume is correct. Everything above exists to convert that into throughput — isolation so parallel work cannot collide, validation gates so nothing lands unverified, and a review surface so a person still says yes. Take the harness away and the same tools produce a large, plausible, unusable mess.</p>
+        </section>
+
+        <section class="case-study-section">
+            <h2>What made the speed safe to trust</h2>
+            <p>Moving this fast is only defensible if the record is good enough that someone else could audit it.</p>
+            <p><strong>Tested like something strangers will use.</strong> More than 7,500 unit and logic tests across roughly 680 files, plus about 120 Playwright end-to-end browser tests, with lint, build, and typecheck run as a gate rather than a habit.</p>
+            <p><strong>A written record of why, not only what.</strong> An append-only decisions log, a blockers register that names what is stuck without stopping unrelated work, a definition of done, route and component ownership maps, and periodic audits — including a contradiction register whose entire job is catching documents that no longer agree with the code. Where a document and the running system disagree, the code wins and the document gets fixed in the same pass.</p>
+            <p><strong>Infrastructure changed under gates.</strong> The move off the original hosted backend onto Postgres and an auth stack with better cost and portability characteristics was run as a branch-isolated program through seventeen QA gates, with rollback criteria written before the work started and production cutover explicitly held back until the last gates clear. The interesting discipline there is the <em>not merging</em> — a migration that passes fifteen of seventeen gates is not done, and calling it done is how a team inherits a silent outage.</p>
+            <p><strong>Compliance built in early.</strong> Versioned terms and privacy acceptance, account data export, email preferences reachable by capability token without an account, opt-in analytics, and a documented security audit. These are cheap to build early and miserable to retrofit during somebody's review.</p>
+        </section>
+
+        <section class="case-study-section">
+            <h2>The venture work</h2>
+            <p>The software is half the job. The other half is deciding what is worth building and when to hold the line.</p>
+            <p><strong>A corpus strategy, not a scraping plan.</strong> The recommendation engine works over three deliberate knowledge layers — a curated corpus with verified metadata, a structured representation of acting traditions and how each one talks about text, and a progressively built actor profile. The middle layer is the one a competitor cannot buy: it is domain expertise about how ten different training lineages describe the same work, and it exists because the founder is a working actor, not because it was scraped.</p>
+            <p><strong>Content policy written before publication, and allowed to constrain the product.</strong> The public library is metadata-only by decision. That is a smaller, slower, less impressive product than a full-text database, and it is the version that can still be operating in three years.</p>
+            <p><strong>A beta posture chosen on purpose.</strong> Waitlist, a cohort cap, no pricing displayed, and a public landing page that stays indexable while access opens carefully. Pricing and packaging are named as decisions ahead of the first priced conversation rather than guessed at now. The point of a small beta is to learn what is worth charging for before charging for it.</p>
+            <p><strong>Segment work done as analysis, not enthusiasm.</strong> Candidate markets — acting studios, class cohorts, workshop coordinators — get evaluated against what the application actually is today, including an explicit list of what <em>not</em> to build for each one. A segment evaluation that ends in "not yet, and here is the sequence that would change that" is worth more than one that ends in a roadmap.</p>
+        </section>
+
+        <section class="case-study-section">
+            <h2>What this demonstrates</h2>
+            <p>On the application side: a complete consumer product with authentication, personalization, structured model output grounded in a controlled corpus, a rights model enforced in code, a kill switch, an editorial operations layer, evaluation infrastructure, cost ceilings, and a release path — built, deployed, and running.</p>
+            <p>On the venture side: a position specific enough to constrain the architecture, a content policy that limits the product on purpose, gates that decide when to widen access, and a written record someone else could audit.</p>
+            <p>And on the question everyone is actually asking about AI-assisted development: it is real, it is large, and it is entirely dependent on the scaffolding around it. The speed came from isolation, validation, and review discipline — from building the factory, not from trusting the output. A founder with a sharp domain insight no longer has to choose between a shallow no-code mockup and a twelve-month engineering build. What they still need is someone who will make the unglamorous decisions — rights, evaluation, cost, gates — while the thing is being built, rather than after it is too late to change them.</p>
+        </section>
+
+        <section class="case-study-section case-study-cta">
+            <h2>If this sounds useful</h2>
+            <p>If you have a product idea too specific for a generic AI wrapper — or you want to know what an AI-native build could actually produce for your team, and what it could not — send the workflow.</p>
+            <p><a href="mailto:hello@vociferous.ai?subject=Product%20build%20brief&body=What%20the%20product%20is%20and%20who%20it%20serves:%0A%0AWhat%20already%20exists:%0A%0AWhat%20has%20to%20be%20true%20for%20v1:%0A%0ATimeline%20and%20constraints:" class="case-study-email" data-ph-cta="case_study_email" data-ph-cta-location="case_study_scenefiend">hello@vociferous.ai</a></p>
+        </section>
+    </article>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <span class="footer-logo">Vociferous AI</span>
+            <span class="footer-copy">© 2026</span>
+        </div>
+    </footer>
+</body>
+</html>

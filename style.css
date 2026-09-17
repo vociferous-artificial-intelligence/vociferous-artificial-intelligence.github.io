@@ -401,6 +401,14 @@ strong {
     margin-bottom: var(--space-lg);
 }
 
+.engagements-grid + .engagements-intro {
+    margin-top: var(--space-lg);
+}
+
+.engagements-intro a {
+    color: var(--color-accent-light);
+}
+
 .engagements-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));

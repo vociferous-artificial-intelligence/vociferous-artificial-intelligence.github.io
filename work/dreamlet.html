@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dreamlet.Studio — a curated home for female-gaze cinema · Vociferous AI</title>
-    <meta name="description" content="Dreamlet.Studio is a live, filmmaker-first platform curating short films that show women as fully realized people — the female gaze — for young cinephiles.">
+    <title>Dreamlet.Studio — from a four-hour sprint to a working venture · Vociferous AI</title>
+    <meta name="description" content="Dreamlet.Studio began as a four-hour sprint at a NY Tech Week 2026 competition and is now a live, filmmaker-first platform for female-gaze cinema — a case study in application development and venture execution.">
     <link rel="canonical" href="https://vociferous.ai/work/dreamlet.html">
     <meta name="robots" content="index,follow">
-    <meta property="og:title" content="Dreamlet.Studio — a curated home for female-gaze cinema · Vociferous AI">
-    <meta property="og:description" content="A live, curated home for short films centered on the female gaze, built with filmmakers, not on top of them.">
+    <meta property="og:title" content="Dreamlet.Studio — from a four-hour sprint to a working venture · Vociferous AI">
+    <meta property="og:description" content="A curated home for female-gaze cinema, co-founded and built from a four-hour competition sprint into a venture with a rights model, filmmaker agreements, and a defensible sequence.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://vociferous.ai/work/dreamlet.html">
     <meta property="og:site_name" content="Vociferous AI">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Dreamlet.Studio — a curated home for female-gaze cinema · Vociferous AI">
-    <meta name="twitter:description" content="A live, curated home for short films centered on the female gaze, built with filmmakers, not on top of them.">
+    <meta name="twitter:title" content="Dreamlet.Studio — from a four-hour sprint to a working venture · Vociferous AI">
+    <meta name="twitter:description" content="A curated home for female-gaze cinema, co-founded and built from a four-hour competition sprint into a venture with a rights model, filmmaker agreements, and a defensible sequence.">
     <link rel="stylesheet" href="/style.css">
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -29,6 +29,7 @@
             <a href="/" class="nav-logo">Vociferous AI</a>
             <div class="nav-links">
                 <a href="/#work">Work</a>
+                <a href="/research">Research</a>
                 <a href="/about">About</a>
                 <a href="/#contact">Contact</a>
             </div>
@@ -39,12 +40,24 @@
     <article class="case-study">
         <header class="case-study-header">
             <p class="case-study-eyebrow"><a href="/#work" data-ph-cta="case_study_back" data-ph-cta-location="case_study_dreamlet">← Selected work</a></p>
-            <h1>Dreamlet.Studio — a curated home for female-gaze cinema</h1>
+            <h1>Dreamlet.Studio — from a four-hour sprint to a working venture</h1>
         </header>
 
         <section class="case-study-section case-study-note">
             <h2>Status</h2>
-            <p><a href="https://dreamlet.studio/" target="_blank" rel="noopener" data-ph-cta="dreamlet_app" data-ph-cta-location="case_study_dreamlet">Dreamlet.Studio</a> is built and live, with founding membership opening now. The next step is a focused creative marketing test, with additional framing being developed for it.</p>
+            <p><a href="https://dreamlet.studio/" target="_blank" rel="noopener" data-ph-cta="dreamlet_app" data-ph-cta-location="case_study_dreamlet">Dreamlet.Studio</a> is built and live. I co-founded it with Jacqui de Jong, who is CEO and the public face of the company — brand, curation, and every filmmaker conversation. I run the build, the architecture, and the commercial terms. The member catalogue is being licensed film by film, and the founding membership is forming around it.</p>
+        </section>
+
+        <section class="case-study-section">
+            <h2>Where it started</h2>
+            <p>The first version of Dreamlet was built in a four-hour sprint at a NY Tech Week 2026 competition, hosted at Datadog in the New York Times Building. It placed 12th and took a special mention. It shipped that evening under a name we replaced a few hours later.</p>
+            <p>Four hours is not enough time to build a business. It is enough time to find out whether an idea survives contact with a working screen — whether the position can be read in one line, whether the first thing a visitor sees makes the case, and whether the people it is for recognise themselves in it. That is what the sprint was for, and that is what it returned.</p>
+        </section>
+
+        <section class="case-study-section">
+            <h2>What the sprint actually settled</h2>
+            <p>A sprint of that length is a decision instrument, not a product. Almost none of the code written that night is still in the application. The thesis is unchanged.</p>
+            <p>That is the useful split, and it is worth naming because it is usually confused: the sprint validated the <em>position</em>, and the months after it built the <em>venture</em>. Treating a hackathon result as a head start on engineering is how founders end up defending a prototype. Treating it as evidence about the market is how it earns its four hours.</p>
         </section>
 
         <section class="case-study-section">
@@ -55,21 +68,55 @@
         <section class="case-study-section">
             <h2>Built with the filmmakers, not on top of them</h2>
             <p>The curation is filmmaker-first. Films link out to where they already live, and filmmakers who opt in get a permanent profile with a bio and stills. The product is designed to send attention to the work and its makers, not to capture it behind a wall.</p>
+            <p>The same principle governs the terms. Each film is licensed individually, with a named window and a named territory, so a filmmaker can see exactly what they have granted and for how long. A platform that asks artists for their work owes them an agreement they can read.</p>
+        </section>
+
+        <section class="case-study-section">
+            <h2>What had to be built</h2>
+            <p>Curation sounds light. The system underneath it is not, because a rights-bearing catalogue has to be correct rather than merely impressive.</p>
+            <ul class="re-fit-list">
+                <li>Public, indexable pages for every film and filmmaker, where the player only mounts for a session entitled to it. Playback credentials are issued server-side, per viewer, after entitlement is confirmed — they never reach a browser that could not have earned one.</li>
+                <li>Rights held as data and enforced in code: licence windows, territories, and per-filmmaker consent gates, with verification scripts that check the running system rather than a document claiming it is fine.</li>
+                <li>A contract path that respects the document a filmmaker actually signs. Their agreement is preserved page for page, a signing block is appended at the end, and the executed file merges the original pages with the signature page.</li>
+                <li>A delivery path for finished films opened by a single-use link, so a filmmaker never has to create an account to hand over their work.</li>
+                <li>Administrative tooling for the catalogue, filmmaker claims, and the people behind them — because the operating load of a curation business is editorial and legal at least as much as it is technical.</li>
+                <li>Accounts, membership state, and cancellation, built so that what a viewer is allowed to see is decided server-side on every request and never written into a URL.</li>
+            </ul>
+        </section>
+
+        <section class="case-study-section">
+            <h2>Two markets, and only one can go first</h2>
+            <p>There is no member product without a licensed catalogue, and no catalogue without filmmakers signing. That dependency is the whole plan, and getting its direction right is worth more than any individual feature.</p>
+            <p>So the venture runs supply-first: secure the filmmakers and the films, then run the member-side sequence once there is something worth selling. It is also why most of the application is supply-side machinery — contracts, delivery, claims, rights — rather than the consumer surface that a demo would have led with.</p>
+        </section>
+
+        <section class="case-study-section">
+            <h2>Running it like a venture, not a project</h2>
+            <p>The engineering is only half of what makes an early company legible to a partner, a filmmaker, or an investor. The other half is whether anyone can reconstruct why it is the way it is.</p>
+            <ul class="re-fit-list">
+                <li><strong>An append-only decision log.</strong> Each consequential decision records the question, the choice, the options rejected, the evidence, a confidence level, and a date to revisit it. A decision no one can point to is indistinguishable from an assumption.</li>
+                <li><strong>Claim gates.</strong> Nothing goes on a public page because it is likely to become true. Each promise the product makes is tied to the condition that makes it sayable, and those conditions are tracked separately — being able to sell and having something to sell are not the same gate, and a page that blurs them is how a company loses trust it cannot buy back.</li>
+                <li><strong>Promised journeys, audited against the database.</strong> Every path a visitor can enter is written down with the promise it makes and what must exist for that promise to hold. The audit counts records in the system, not sentences in the copy.</li>
+                <li><strong>A clear operator split.</strong> Jacqui runs all field research and every filmmaker and member conversation. I run the terms, the sign-offs, and the launch package. Each side's work is self-contained, so neither of us is a bottleneck on the other.</li>
+                <li><strong>Private information stays out of the repository.</strong> Interview material, and any filmmaker name paired with commercial terms, lives in a separate private store by policy rather than by habit.</li>
+            </ul>
         </section>
 
         <section class="case-study-section">
             <h2>A note on the counter</h2>
-            <p>The animated count climbing toward ten million reflects the fast-growing young-women cinephile audience the product is built for. It is a cultural signal, not a count of Dreamlet's own users and not a traction claim.</p>
+            <p>The animated count climbing toward ten million on the site reflects the fast-growing young-women cinephile audience the product is built for. It is a cultural signal, not a count of Dreamlet's own users and not a traction claim. The distinction is made on the page itself, which is the same discipline described above applied to the one number a visitor is most likely to misread.</p>
         </section>
 
         <section class="case-study-section">
-            <h2>What this illustrates</h2>
-            <p>A curation product still needs disciplined product work: a specific audience, a position that explains itself in a sentence, a respectful arrangement with the people whose work it features, and a marketing test that can separate curiosity from durable interest.</p>
+            <h2>What this demonstrates</h2>
+            <p>On the application side: a real product with authentication, entitlement, media delivery, a rights model enforced in code, document execution, and administrative tooling — shipped and operating, not described in a deck.</p>
+            <p>On the venture side: a position sharp enough to explain itself in a sentence, a respectful arrangement with the people whose work it features, a sequence that follows the dependencies rather than the enthusiasm, and a record of decisions that someone else could audit.</p>
+            <p>The honest version of the four-hour story is not that four hours produced a company. It is that four hours produced a decision, and the work after it produced a system, a rights model, a set of agreements, and a plan that holds up when someone asks why.</p>
         </section>
 
         <section class="case-study-section case-study-cta">
             <h2>If this sounds useful</h2>
-            <p>If you have a focused creative-product idea and need to turn it into a live application and a credible market test, send the brief.</p>
+            <p>If you have a focused creative-product idea, or a venture that needs the application and the plan around it built together, send the brief.</p>
             <p><a href="mailto:hello@vociferous.ai?subject=Creative%20application%20brief&body=The%20audience%20and%20creative%20problem:%0A%0AWhat%20already%20exists:%0A%0AWhat%20you%20want%20to%20test:%0A%0ATimeline%20and%20constraints:" class="case-study-email" data-ph-cta="case_study_email" data-ph-cta-location="case_study_dreamlet">hello@vociferous.ai</a></p>
         </section>
     </article>
