@@ -806,7 +806,26 @@ strong {
         --space-xxl: 5rem;
     }
     
+    /* compact wrapped nav instead of no nav at all */
     .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 0.4rem 0.85rem;
+        max-width: 65%;
+    }
+
+    .nav-links a,
+    .nav-dd-trigger {
+        font-size: 0.8125rem;
+    }
+
+    /* hover menus do not work on touch: link straight through to /research */
+    .nav-dd-menu {
+        display: none;
+    }
+
+    .nav-dd-caret {
         display: none;
     }
     
@@ -839,4 +858,139 @@ strong {
     .btn {
         text-align: center;
     }
+}
+
+/* ---- Nav dropdown (Research: Finance / Law / Medicine) ---- */
+.nav-dd {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.nav-dd-trigger {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.nav-dd-trigger:hover,
+.nav-dd:hover .nav-dd-trigger,
+.nav-dd:focus-within .nav-dd-trigger {
+    color: var(--color-text);
+}
+
+.nav-dd-caret {
+    font-size: 0.65rem;
+    line-height: 1;
+    position: relative;
+    top: 1px;
+}
+
+.nav-dd-menu {
+    position: absolute;
+    top: 100%;
+    left: -0.75rem;
+    min-width: 200px;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    padding: 0.35rem 0;
+    margin-top: 0.5rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.09);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4px);
+    transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
+    z-index: 200;
+}
+
+/* invisible hover bridge so the menu does not close in the gap */
+.nav-dd-menu::before {
+    content: "";
+    position: absolute;
+    top: -0.6rem;
+    left: 0;
+    right: 0;
+    height: 0.6rem;
+}
+
+.nav-dd:hover .nav-dd-menu,
+.nav-dd:focus-within .nav-dd-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.nav-dd-menu a {
+    display: block;
+    padding: 0.5rem 1rem;
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    white-space: nowrap;
+}
+
+.nav-dd-menu a:hover {
+    color: var(--color-text);
+    background: var(--color-bg-alt);
+}
+
+/* ---- Domains strip ---- */
+.domains {
+    padding: var(--space-lg) var(--space-md);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.domains-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.domains-intro {
+    color: var(--color-text-muted);
+    max-width: var(--max-width-narrow);
+    margin-bottom: var(--space-md);
+}
+
+.domains-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--space-sm);
+}
+
+.domain-card {
+    display: block;
+    padding: 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    background: var(--color-bg);
+    color: inherit;
+    transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.domain-card:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-2px);
+}
+
+.domain-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+.domain-card p {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    margin: 0;
+}
+
+.domain-tag {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--color-text-light);
+    margin-bottom: 0.5rem;
 }

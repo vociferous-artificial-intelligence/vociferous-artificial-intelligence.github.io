@@ -29,7 +29,15 @@
             <a href="/" class="nav-logo">Vociferous AI</a>
             <div class="nav-links">
                 <a href="/#work">Work</a>
-                <a href="/research">Research</a>
+                <div class="nav-dd">
+                    <a href="/research" class="nav-dd-trigger" data-ph-cta="research_page" data-ph-cta-location="nav">Research <span class="nav-dd-caret" aria-hidden="true">&#9662;</span></a>
+                    <div class="nav-dd-menu">
+                        <a href="/research" data-ph-cta="research_page" data-ph-cta-location="nav_dd">Approach &amp; method</a>
+                        <a href="/finance" data-ph-cta="finance_page" data-ph-cta-location="nav_dd">Finance</a>
+                        <a href="/law" data-ph-cta="law_page" data-ph-cta-location="nav_dd">Law</a>
+                        <a href="/medicine" data-ph-cta="medicine_page" data-ph-cta-location="nav_dd">Medicine</a>
+                    </div>
+                </div>
                 <a href="/#approach">How I work</a>
                 <a href="/about">About</a>
                 <a href="/#contact">Contact</a>
@@ -79,6 +87,15 @@
             <p><strong>A legal-reasoning benchmark.</strong> A full re-derivation of gold labels for every item in a widely used legal benchmark's rule-governed tasks, from primary authority, with the answer key sealed off from the derivation. The audit is largely a confirmation — which is the harder result to publish and the more useful one to have. It also locates precisely where deterministic validation stops and trained legal judgment has to take over.</p>
             <p><strong>A medication-safety benchmark.</strong> A structural audit of a public clinical-safety benchmark whose documented construction rule infers that a drug is safe from the absence of a recorded risk. The audit shows what that inference does not guarantee, measures how often the gap is realized across the whole benchmark, and proposes a quarantine-and-review workflow that separates what a maintainer can fix mechanically from what requires a clinician.</p>
             <p><em>Both papers are under peer review. Titles, venue, and full findings are available on request under NDA, and will be published here when the decisions land.</em></p>
+            <p><strong>A third strand is in progress, in finance — and it runs past the audit.</strong> An independent reproduction of published model baselines for inference over financial disclosure language, against an evaluation set carrying several finance-professional judgments per item rather than a single gold label. The failure modes it surfaces — shortcut signal, contested expert labels collapsed into one, unanswerable items dropped from the score — are only half of it. The same artifacts feed method work aimed at raising what a model actually gets right on financial sources: domain fine-tuning and training-label repair, per-item routing across models whose errors are complementary, training toward the expert vote distribution rather than one label, and calibrated abstention that routes the hard items to a person. Both halves are on the <a href="/finance" data-ph-cta="finance_page" data-ph-cta-location="research_page">Finance page</a>.</p>
+        </section>
+
+        <section class="case-study-section">
+            <h2>The three sectors</h2>
+            <p>The method is one thing; it lands differently in each domain where being wrong is expensive.</p>
+            <p><strong><a href="/finance" data-ph-cta="finance_page" data-ph-cta-location="research_page">Finance →</a></strong> Inference over filings, earnings calls, and annual reports. Auditing what a finance AI score actually measures, and developing the methods that raise what a model gets right on those documents. Plus identity infrastructure for financial institutions and consumer-fintech venture advisory.</p>
+            <p><strong><a href="/law" data-ph-cta="law_page" data-ph-cta-location="research_page">Law →</a></strong> A full re-derivation of a widely used legal benchmark's gold labels from primary authority, and the build side: source-grounded review, citation finding, and private model training that keeps privileged material in an environment the client controls.</p>
+            <p><strong><a href="/medicine" data-ph-cta="medicine_page" data-ph-cta-location="research_page">Medicine →</a></strong> A structural audit of a public medication-safety benchmark that infers safety from the absence of a recorded risk, and source-grounded evidence synthesis that shows conflicting evidence as conflicting rather than averaging it away.</p>
         </section>
 
         <section class="case-study-section">

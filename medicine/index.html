@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine — source-grounded evidence synthesis, and a safety benchmark that infers safety from silence · Vociferous AI</title>
+    <meta name="description" content="Clinical and health knowledge systems: source-grounded literature synthesis that keeps uncertainty intact, and a structural audit of a public medication-safety benchmark whose construction rule infers that a drug is safe from the absence of a recorded risk.">
+    <link rel="canonical" href="https://vociferous.ai/medicine">
+    <meta name="robots" content="index,follow">
+    <meta property="og:title" content="Medicine — source-grounded evidence synthesis, and a safety benchmark that infers safety from silence · Vociferous AI">
+    <meta property="og:description" content="A wrong key on a capability benchmark mismeasures. A wrong key on a safety benchmark can invert.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://vociferous.ai/medicine">
+    <meta property="og:site_name" content="Vociferous AI">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Medicine — source-grounded evidence synthesis, and a safety benchmark that infers safety from silence · Vociferous AI">
+    <meta name="twitter:description" content="A wrong key on a capability benchmark mismeasures. A wrong key on a safety benchmark can invert.">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="/analytics.js" defer></script>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="/" class="nav-logo">Vociferous AI</a>
+            <div class="nav-links">
+                <a href="/#work">Work</a>
+                <div class="nav-dd">
+                    <a href="/research" class="nav-dd-trigger" data-ph-cta="research_page" data-ph-cta-location="nav">Research <span class="nav-dd-caret" aria-hidden="true">&#9662;</span></a>
+                    <div class="nav-dd-menu">
+                        <a href="/research" data-ph-cta="research_page" data-ph-cta-location="nav_dd">Approach &amp; method</a>
+                        <a href="/finance" data-ph-cta="finance_page" data-ph-cta-location="nav_dd">Finance</a>
+                        <a href="/law" data-ph-cta="law_page" data-ph-cta-location="nav_dd">Law</a>
+                        <a href="/medicine" data-ph-cta="medicine_page" data-ph-cta-location="nav_dd">Medicine</a>
+                    </div>
+                </div>
+                <a href="/#approach">How I work</a>
+                <a href="/about">About</a>
+                <a href="/#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <main id="main">
+    <article class="case-study">
+        <header class="case-study-header">
+            <p class="case-study-eyebrow"><a href="/" data-ph-cta="medicine_back" data-ph-cta-location="medicine_page">← Vociferous AI</a> · <a href="/research" data-ph-cta="research_page" data-ph-cta-location="medicine_page">Research</a> · Medicine</p>
+            <h1>When a safety benchmark infers safety from silence</h1>
+        </header>
+
+        <section class="case-study-section">
+            <h2>Scope, stated first</h2>
+            <p>This describes a research result and a capability. It is not a medical product, it is not medical advice, and it does not describe a clinical client engagement. Any use that touches real care keeps a qualified clinician in charge. My training is a Ph.D. in Chemical Engineering from MIT, in the MIT Biotechnology Center — I am not a clinician, and the work is built so that the clinician's judgment is the thing that moves its ceiling.</p>
+        </section>
+
+        <section class="case-study-section">
+            <h2>The audit</h2>
+            <p>I ran a structural audit of a public medication-safety benchmark whose documented construction rule infers that a drug is <em>safe</em> from the <em>absence</em> of a recorded risk.</p>
+            <p>That inference is the entire issue. Absence of evidence in a source database is not evidence of absence in a patient. The rule is applied mechanically across the benchmark, which means one flawed premise seeds a defect across many items, each of which looks individually plausible to a reviewer spot-checking a sample.</p>
+            <p>The audit shows what that inference does not guarantee, measures how often the gap is actually realized across the whole benchmark rather than a sampled subset, and proposes a quarantine-and-review workflow that separates what a maintainer can fix mechanically from what requires a clinician. The paper is under peer review; title, venue, and full findings stay private until the decision lands.</p>
+        </section>
+
+        <section class="case-study-section case-study-note">
+            <h2>Why a safety benchmark is a different problem</h2>
+            <p>A wrong key on a capability benchmark mismeasures. A wrong key on a <strong>safety</strong> benchmark can invert.</p>
+            <p>If an item's designated correct answer is the action the benchmark was built to discourage, then the unsafe choice scores correct and a model that refuses it scores wrong. A leaderboard containing items like that is partly ranking models by their willingness to do the thing you are testing for. The score does not go fuzzy — it points the other way.</p>
+            <p>Three properties make this worth specialist attention. <strong>No amount of model-side testing finds it</strong>, because the defect sits upstream of every model you evaluate. <strong>It propagates</strong>, because benchmarks are increasingly generated from a rule applied to a structured source rather than authored item by item. And <strong>below-chance accuracy is usually read as a fact about models</strong> when it is sometimes a fact about the items — when a whole field of systems performs worse than guessing on a subset, that should trigger an item audit before it licenses any conclusion about capability.</p>
+        </section>
+
+        <section class="case-study-section">
+            <h2>What I build</h2>
+            <p><strong>Source-grounded literature synthesis.</strong> Retrieval and synthesis grounded in the actual literature, where every claim ties back to a paper, guideline, or source a reader can open. Conflicting evidence is shown as conflicting rather than averaged away, and confidence is stated plainly. The system organizes the evidence; it does not pretend to settle it.</p>
+            <p><strong>What it is good for.</strong> Literature reviews and treatment-option comparisons, preparation for a specialist consultation, and second-opinion research support — the work of gathering and structuring evidence so a person can reason about it well. It is strongest as preparation for a human decision, never as the decision.</p>
+            <p><strong>Where it must not go.</strong> It does not diagnose, it does not prescribe, and it does not replace a clinician. On health questions the cost of false confidence is measured in harm, so the system is built to defer: surface the evidence, mark the uncertainty, and route the judgment to a qualified human.</p>
+        </section>
+
+        <section class="case-study-section">
+            <h2>What this is worth to a team</h2>
+            <p><strong>You maintain a clinical benchmark or eval set.</strong> The question is whether its construction rule states an inference it cannot support, and how many items inherit that. A census answers it exactly; a sample does not.</p>
+            <p><strong>You are buying a clinical AI tool on the strength of a score.</strong> Ask what the score was computed against, whether the key was derived independently of any model, and what the system does when it should decline to answer. Those three questions separate most vendors.</p>
+            <p><strong>You are building, and the safety behavior is the product.</strong> Then abstention, calibrated confidence, and a named point where a clinician takes over are not features to add later — they are the architecture.</p>
+            <p>The method behind all of it — model off the measurement path, census rather than sample, evidence grades never summed, the human named where the human is load-bearing — is on the <a href="/research" data-ph-cta="research_page" data-ph-cta-location="medicine_page">Research page</a>.</p>
+        </section>
+
+        <section class="case-study-section case-study-cta">
+            <h2>If this is your field</h2>
+            <p>If you work in health, clinical research, or medical knowledge tools and want AI that stays honest about what it knows — or you maintain an evaluation set that a clinical decision depends on — send the workflow.</p>
+            <p><a href="mailto:hello@vociferous.ai?subject=Clinical%20AI%20or%20benchmark%20review&body=The%20workflow%20or%20evaluation%20set:%0A%0AWhat%20the%20output%20informs:%0A%0AWho%20the%20clinician%20reviewers%20would%20be:%0A%0ATimeline:" class="case-study-email" data-ph-cta="medicine_email" data-ph-cta-location="medicine_page">hello@vociferous.ai</a></p>
+        </section>
+    </article>
+    </main>
+    <footer class="footer">
+        <div class="footer-inner">
+            <span class="footer-logo">Vociferous AI</span>
+            <span class="footer-copy">© 2026</span>
+        </div>
+    </footer>
+</body>
+</html>

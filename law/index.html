@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Law — source-grounded review, private models, and the benchmark audit behind them · Vociferous AI</title>
+    <meta name="description" content="Legal and public-interest AI: source-grounded document review and citation finding, private model training that keeps privileged material in your environment, and an audit of a widely used legal-reasoning benchmark now under peer review.">
+    <link rel="canonical" href="https://vociferous.ai/law">
+    <meta name="robots" content="index,follow">
+    <meta property="og:title" content="Law — source-grounded review, private models, and the benchmark audit behind them · Vociferous AI">
+    <meta property="og:description" content="Confidentiality, traceability, and a clear human-in-the-loop boundary are the hard parts of legal AI — not the model.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://vociferous.ai/law">
+    <meta property="og:site_name" content="Vociferous AI">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Law — source-grounded review, private models, and the benchmark audit behind them · Vociferous AI">
+    <meta name="twitter:description" content="Confidentiality, traceability, and a clear human-in-the-loop boundary are the hard parts of legal AI — not the model.">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="/analytics.js" defer></script>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="/" class="nav-logo">Vociferous AI</a>
+            <div class="nav-links">
+                <a href="/#work">Work</a>
+                <div class="nav-dd">
+                    <a href="/research" class="nav-dd-trigger" data-ph-cta="research_page" data-ph-cta-location="nav">Research <span class="nav-dd-caret" aria-hidden="true">&#9662;</span></a>
+                    <div class="nav-dd-menu">
+                        <a href="/research" data-ph-cta="research_page" data-ph-cta-location="nav_dd">Approach &amp; method</a>
+                        <a href="/finance" data-ph-cta="finance_page" data-ph-cta-location="nav_dd">Finance</a>
+                        <a href="/law" data-ph-cta="law_page" data-ph-cta-location="nav_dd">Law</a>
+                        <a href="/medicine" data-ph-cta="medicine_page" data-ph-cta-location="nav_dd">Medicine</a>
+                    </div>
+                </div>
+                <a href="/#approach">How I work</a>
+                <a href="/about">About</a>
+                <a href="/#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <main id="main">
+    <article class="case-study">
+        <header class="case-study-header">
+            <p class="case-study-eyebrow"><a href="/" data-ph-cta="law_back" data-ph-cta-location="law_page">← Vociferous AI</a> · <a href="/research" data-ph-cta="research_page" data-ph-cta-location="law_page">Research</a> · Law</p>
+            <h1>Legal AI, where a wrong citation is the whole problem</h1>
+        </header>
+
+        <section class="case-study-section">
+            <h2>Two halves</h2>
+            <p>This page describes a capability and how I approach it. It names no client and no matter, and where work is still in progress it is described as a capability rather than a finished result.</p>
+            <p><strong>Research.</strong> I audited a widely used legal-reasoning benchmark — a full re-derivation of the gold labels for every item in its rule-governed tasks, from primary authority, with the published answer key sealed off from the derivation path. The result is largely a confirmation, which is the harder outcome to publish and the more useful one to have. It also locates precisely where deterministic validation stops and trained legal judgment has to take over. The paper is under peer review; title, venue, and full findings stay private until the decision lands.</p>
+            <p><strong>Build.</strong> Source-grounded review systems for legal teams, and private model training for work that cannot go to a commercial API.</p>
+        </section>
+
+        <section class="case-study-section">
+            <h2>Why legal AI fails, and it is not the model</h2>
+            <p>Legal work is document-heavy and bound by confidentiality. Three constraints bind at once, and a general chatbot fails all three.</p>
+            <p>The answer has to be tied to an authority a person can open and check. The sensitive material often cannot be sent to a commercial model provider at all. And the cost of a confident wrong answer is not a bad user experience — it is a sanctionable filing, a missed limitation period, or privileged material in someone else's training set.</p>
+            <p>So the hard parts of legal AI are confidentiality, traceability, evaluation, and a clear human-in-the-loop boundary. Get those right and the technology becomes trustworthy enough to actually use on a real matter. Get them wrong and no amount of model quality rescues it.</p>
+        </section>
+
+        <section class="case-study-section">
+            <h2>What I build</h2>
+            <p><strong>Source-grounded review and citation finding.</strong> The first useful version helps a legal team move faster without giving up control: AI-assisted citation finding, authority recommendations, and document review where every answer points back to the document or authority it came from. The system finds, organizes, and grounds. The lawyer decides.</p>
+            <p><strong>Private model training, on your own terms.</strong> When the work requires a model trained on legal documents rather than calls to a public API, I take that end to end — supervised training and fine-tuning, evaluation against precision, recall, and F1 benchmarks, and delivery of the trained weights. Smaller models with intelligent routing keep inference affordable, and the pipeline can be built from open components with no proprietary lock-in.</p>
+            <p><strong>Privacy by deployment, not by promise.</strong> For privileged or confidential material, privacy has to be structural. The pipeline can run self-hosted, on-premises, or fully isolated, so training data and client documents never leave an environment the client controls and are never sent to a third-party model provider. The guarantee lives in where the system runs, not in a vendor's policy.</p>
+        </section>
+
+        <section class="case-study-section case-study-note">
+            <h2>What the benchmark audit taught me that applies to your evaluation</h2>
+            <p><strong>A confirmation is a result.</strong> Most audit work is published only when it finds something damaging. That selection pressure is itself a problem: it means the field has almost no record of which benchmarks <em>are</em> sound. Re-deriving every label and reporting that the key largely holds is less dramatic and more useful to anyone deciding whether to rely on it.</p>
+            <p><strong>The boundary is the finding.</strong> The most valuable output was not a defect count. It was the precise line where a rule can be applied deterministically and where it stops abbreviating doctrine and requires a licensed attorney. An evaluation that does not state that boundary is implicitly claiming there isn't one.</p>
+            <p><strong>Additional model readers are not a substitute for a lawyer.</strong> They can map where disagreement lives and how stable it is. They cannot adjudicate it. Expert review is not a compliance step appended to the end — it is the mechanism by which the work's ceiling moves.</p>
+            <p>The full method is on the <a href="/research" data-ph-cta="research_page" data-ph-cta-location="law_page">Research page</a>.</p>
+        </section>
+
+        <section class="case-study-section">
+            <h2>Public-interest fit</h2>
+            <p>This matters most where the stakes are high and the budgets are thin: civil legal aid, nonprofits, and access-to-justice organizations that hold sensitive client information and can afford neither a data leak nor a hallucinated citation. The same patterns that protect a firm's privileged files protect a legal-aid client's, and the cost structure that makes self-hosted small models viable matters far more to the second group than the first.</p>
+        </section>
+
+        <section class="case-study-section">
+            <h2>Where AI helps, and where it must not</h2>
+            <p>AI here is an assistant to judgment, not a substitute for it. It does not give legal advice and it does not decide. It makes the record searchable, keeps answers tied to sources, and surfaces what a person should check — so an attorney's time goes to the judgment only a person can make.</p>
+        </section>
+
+        <section class="case-study-section case-study-cta">
+            <h2>If this is your work</h2>
+            <p>If you run a legal or public-interest team weighing AI — where confidentiality and source-grounding are non-negotiable — or you are about to rely on a legal benchmark nobody has checked, send the workflow.</p>
+            <p><a href="mailto:hello@vociferous.ai?subject=Legal%20AI&body=The%20workflow%20or%20matter%20type:%0A%0AConfidentiality%20constraints:%0A%0AWhat%20a%20first%20engagement%20would%20need%20to%20answer:%0A%0ATimeline:" class="case-study-email" data-ph-cta="law_email" data-ph-cta-location="law_page">hello@vociferous.ai</a></p>
+        </section>
+    </article>
+    </main>
+    <footer class="footer">
+        <div class="footer-inner">
+            <span class="footer-logo">Vociferous AI</span>
+            <span class="footer-copy">© 2026</span>
+        </div>
+    </footer>
+</body>
+</html>

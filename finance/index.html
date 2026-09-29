@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance — measuring AI on financial language, and making it better · Vociferous AI</title>
+    <meta name="description" content="Gregory O'Connor on AI in finance: co-founder and founding CTO of Socure, venture and financial analysis across fintech, and current research on both auditing and improving AI systems that read financial language — filings, earnings calls, and annual reports.">
+    <link rel="canonical" href="https://vociferous.ai/finance">
+    <meta name="robots" content="index,follow">
+    <meta property="og:title" content="Finance — measuring AI on financial language, and making it better · Vociferous AI">
+    <meta property="og:description" content="Most finance AI is graded against an answer key nobody checked. Five ways those evaluations mislead — and five methods for raising what a model actually gets right on filings and earnings calls.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://vociferous.ai/finance">
+    <meta property="og:site_name" content="Vociferous AI">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Finance — measuring AI on financial language, and making it better · Vociferous AI">
+    <meta name="twitter:description" content="Most finance AI is graded against an answer key nobody checked. Five ways those evaluations mislead — and five methods for raising what a model actually gets right on filings and earnings calls.">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script src="/analytics.js" defer></script>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="/" class="nav-logo">Vociferous AI</a>
+            <div class="nav-links">
+                <a href="/#work">Work</a>
+                <div class="nav-dd">
+                    <a href="/research" class="nav-dd-trigger" data-ph-cta="research_page" data-ph-cta-location="nav">Research <span class="nav-dd-caret" aria-hidden="true">&#9662;</span></a>
+                    <div class="nav-dd-menu">
+                        <a href="/research" data-ph-cta="research_page" data-ph-cta-location="nav_dd">Approach &amp; method</a>
+                        <a href="/finance" data-ph-cta="finance_page" data-ph-cta-location="nav_dd">Finance</a>
+                        <a href="/law" data-ph-cta="law_page" data-ph-cta-location="nav_dd">Law</a>
+                        <a href="/medicine" data-ph-cta="medicine_page" data-ph-cta-location="nav_dd">Medicine</a>
+                    </div>
+                </div>
+                <a href="/#approach">How I work</a>
+                <a href="/about">About</a>
+                <a href="/#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main">
+    <article class="case-study">
+        <header class="case-study-header">
+            <p class="case-study-eyebrow"><a href="/" data-ph-cta="finance_back" data-ph-cta-location="finance_page">← Vociferous AI</a> · Finance</p>
+            <h1>Measuring AI on financial language, and then making it better</h1>
+        </header>
+
+        <section class="case-study-section">
+            <h2>Three strands</h2>
+            <p>Finance runs through most of what I've built, in three different forms.</p>
+            <p><strong>Infrastructure for financial services.</strong> I am a co-founder and the founding CTO of <a href="https://www.socure.com/" target="_blank" rel="noopener" data-ph-cta="socure" data-ph-cta-location="finance_page">Socure</a>, a digital identity-verification company whose business is deciding, at speed and at scale, whether the person on the other side of an account opening is who they claim to be. I built the early technical case and took the first meetings with American Express and other major financial institutions — which is where you learn quickly that an institutional buyer does not evaluate a model, they evaluate whether your claim about the model will survive their risk, compliance, and procurement review.</p>
+            <p>That is a machine-learning product operating inside a regulated workflow, where a wrong answer is a chargeback, a declined good customer, or a compliance finding. It is also where I first had to answer the question this page is about: what exactly was this measured against, and who checked that.</p>
+            <p><strong>Consumer fintech venture advisory.</strong> I served as strategic advisor to the founding team of an early-stage consumer fintech, running the full arc that turns an idea into an investable plan for a new consumer payments product. The client and product are confidential; the shape of the work is below. Across my other ventures I do the market, pricing, licensing, and unit-economics work alongside the engineering rather than handing it off, which is why technical choices stay attached to a cost and a business case instead of drifting from one.</p>
+            <p><strong>Measuring finance AI honestly, and then making it better.</strong> This is the current work, and it has two halves that belong together: auditing whether an evaluation of financial language means what it claims, and developing methods that raise what a model can actually deliver on financial source documents. The rest of this page is about both.</p>
+        </section>
+
+        <section class="case-study-section case-study-note">
+            <h2>What the fintech advisory actually covered</h2>
+            <p>Named here because the breadth is the point, not the client. The company and its product mechanics stay confidential.</p>
+            <p><strong>Market and model.</strong> Sized the market opportunity and mapped the competitive landscape, pressure-tested the business model and unit economics, and designed the product's core technical architecture.</p>
+            <p><strong>Vendor and infrastructure diligence.</strong> Diligence across more than ten infrastructure providers — card issuing, banking and ledgering, bank-account connectivity, identity and KYC/AML, payment operations, and analytics — compared on capability, cost, counterparty risk, and how cleanly each would integrate into the rest of the stack.</p>
+            <p><strong>Regulatory and compliance pathway.</strong> Structured the pathway covering money-transmission licensing, BSA/AML, Reg E, and PCI DSS, and mapped what each milestone required before launch rather than after it became a problem.</p>
+            <p><strong>Risk, IP, and financial modeling.</strong> Assessed intellectual-property and patent exposure, modeled counterparty and platform risk, and built multi-year financial and valuation scenarios alongside founder-economics, dilution, and fundraising analysis.</p>
+            <p><strong>Growth and operating plan.</strong> Framed the growth strategy and operating metrics, the hiring and advisory slate, a staged go/no-go gate framework, and a multi-year operational-handoff plan.</p>
+            <p>The result was a defensible roadmap from first vendor call to soft launch. The point of the engagement was breadth held to a single standard: market, architecture, regulation, and economics evaluated together, so a choice in one area stayed honest about its cost in the others. That is the difference between a pitch and a plan.</p>
+        </section>
+
+        <section class="case-study-section">
+            <h2>The primitive nobody audits</h2>
+            <p>A large share of applied finance AI reduces to one question: <em>given this passage from a filing, an earnings call, or an annual report, does this claim follow from it, contradict it, or neither?</em></p>
+            <p>That is natural language inference, and it sits underneath the things people actually want. Does the summary say anything the document doesn't support. Does this quarter's guidance contradict last quarter's. Does the risk factor actually state the exposure the analyst has attributed to it. Is the number in the narrative the number in the table. Every one of those is an entailment judgment wearing a product name.</p>
+            <p>So when a vendor or a team reports that their system is 78% accurate on financial inference, that number is load-bearing. It decides whether the system goes near an analyst's workflow. And it is produced by grading the model against an answer key — which is, almost always, the one component in the pipeline nobody has checked.</p>
+            <p>My current research checks it: a full independent reproduction of published model baselines on financial inference, run end to end on my own hardware, against an evaluation set carrying multiple finance-professional judgments per item rather than a single label — with calibration and error-overlap diagnostics across several model families, from zero-shot general-domain classifiers through a domain fine-tune to a 70B open model.</p>
+            <p>That reproduction is the foundation for the second half of the work, which is building methods that improve what a model gets right on financial source documents. It is in progress. The dataset, the paper it audits, and the specific findings stay unnamed here until the work is finished.</p>
+            <p>What I can describe now is the failure modes, because they are not specific to one dataset. I have found some version of each of these more than once.</p>
+        </section>
+
+        <section class="case-study-section">
+            <h2>Five ways a finance AI score misleads you</h2>
+
+            <p><strong>1. The model may not be reading the document.</strong> Withhold the source passage entirely and give the model only the claim it is supposed to verify. If it still scores well above chance, then some of its reported accuracy is coming from the phrasing of the claim — length, hedging, negation, how a generated statement tends to be worded — and not from the filing. This is cheap to test and rarely tested. It does not mean the system is worthless; it means the headline number is partly measuring something other than financial reading comprehension, and you should know which part before you trust it on a document it has never seen.</p>
+
+            <p><strong>2. One gold label hides a panel of experts who disagreed.</strong> Financial judgment is not uniformly crisp. When several finance professionals label the same item, a substantial minority of items are contested — decided by majority, often with at least one annotator marking low confidence. Collapsing that into a single right answer throws away the most useful signal in the whole dataset, which is <em>where the experts themselves split</em>. Models err disproportionately on exactly those items. A system that is 95% accurate on the unanimous items and near chance on the contested ones is a very different product from one that is uniformly mediocre — same headline score, opposite deployment decision. Ask for the breakdown.</p>
+
+            <p><strong>3. The cases the model couldn't answer may have been deleted from the score.</strong> This one is mechanical and I find it in evaluation harnesses repeatedly. When a model returns something unparseable — a refusal, a malformed label, an empty completion — a scoring routine that only counts predictions inside the valid label set silently drops that item from the confusion matrix. The reported accuracy is then computed over the subset the model managed to handle. In a small worked example, three correct answers and one unparsed output scored 100%; counting the failure honestly gave 88.9%. In production that gap is the difference between a system that works and one that works <em>when it works</em>. A finance evaluation needs an explicit policy for abstention and failure, and abstentions belong in the denominator or in their own line — never in neither.</p>
+
+            <p><strong>4. Train and test may share more context than the split implies.</strong> Benchmarks built by generating many claims from a pool of source documents can put the same underlying passage on both sides of the split, with different claims attached. That is not duplicate data, and it usually passes a duplicate check — but the model has seen the document. Performance on those items is systematically better, and the overall score therefore overstates how the system will do on a filing it has genuinely never encountered. The fix is to report the clean subset separately, and to group splits by source document rather than by item.</p>
+
+            <p><strong>5. "Best model" often means "best model we were allowed to run."</strong> Published finance benchmarks frequently exclude frontier commercial models, for reasons that are entirely legitimate — data governance restrictions on sending institutional text to external APIs, output-licensing terms, a preference for reproducible open weights. The reason is rarely stated. The consequence is that a leaderboard's top number is the best <em>open</em> result, not the state of the art. If your institution has a data-governance posture that permits something the benchmark authors could not use, the published ceiling is not your ceiling. If it doesn't, the published ceiling may be exactly right — and that is worth knowing deliberately rather than by accident.</p>
+        </section>
+
+        <section class="case-study-section">
+            <h2>The other half: methods that raise the output</h2>
+            <p>An audit tells you a number is wrong. That is necessary, and on its own it is not worth much to anyone with a product to ship.</p>
+            <p>The useful part is that the artifacts a rigorous audit produces are exactly the inputs a better method needs. Once you have per-item predictions and class probabilities from several model families on the same financial corpus, plus a panel of expert judgments with confidence rather than a single flattened label, you are holding the raw material for improvement rather than just a verdict. Five directions I am developing on that basis.</p>
+
+            <p><strong>Domain fine-tuning, and the label noise that caps it.</strong> General-purpose inference models transfer to financial language poorly — the vocabulary of guidance, accrual, restatement and hedged forward-looking commitment is not the vocabulary they were trained on. Fine-tuning on in-domain financial text recovers real ground, and I run that end to end rather than quoting someone else's result. The less obvious finding is that the ceiling is usually not the model. Training sets for financial inference are commonly generated by a large model and never checked by a human, so a meaningful fraction of training labels are simply wrong. Cleaning the training labels is frequently a larger lever than a larger model, and far cheaper.</p>
+
+            <p><strong>Combining models that fail differently.</strong> Across model families on the same financial items, the errors turn out to be substantially complementary — the items a fine-tuned domain model gets wrong are not the items a large general model gets wrong. That is the precondition for a combiner or a router that picks per item rather than globally, and it is the method I am building next. I am holding it in advance to a standard that most ensemble work skips: it has to beat the best single model <em>and</em> simple fixed combinations, it has to be fit on data separated from the data it is evaluated on, and the oracle number gets reported as headroom rather than as a result. Until that clears, the honest claim is complementarity measured, not accuracy delivered.</p>
+
+            <p><strong>Training toward the expert distribution instead of one answer.</strong> When three finance professionals label an item and split two-to-one, the majority label is an impoverished summary of what actually happened. Using the vote distribution and the annotators' own confidence as the training target teaches the model something a hard label cannot: that some financial judgments are genuinely contested, and roughly how contested. A system that knows the difference between a clear entailment and a close call is more useful in a workflow than one that is slightly more accurate on average.</p>
+
+            <p><strong>Calibration and selective prediction.</strong> In a finance workflow the metric that matters is almost never raw accuracy. It is accuracy at a coverage level you choose — how good the system is on the 70% of items it is willing to answer, with the remaining 30% routed to a person. That only works if the model's confidence means something, which by default it does not. Calibrating it, then setting the abstention threshold against the real cost of a wrong answer versus the real cost of a human review, converts a benchmark score into an operating decision. This is also where an audit and a method meet: the failure mode where unanswerable items vanish from the score is the same mechanism that makes a well-designed abstention policy look like a loss.</p>
+
+            <p><strong>An evaluation protocol that does not fool its author.</strong> None of the above is believable without it. Split by source document rather than by item, so the model cannot be rewarded for having seen the filing. Fix the estimand before tuning — majority-label accuracy, agreement with the expert distribution, calibration, and selective prediction are four different objectives and collapsing them into one hides the trade-off you are making. Keep anything you fit strictly separate from anything you report. Say plainly when a set has already informed exploratory analysis, because it has stopped being a clean test.</p>
+
+            <p><em>These are in development. Until gains are measured under that protocol, I report the design and the diagnostics — not the gains.</em></p>
+        </section>
+
+        <section class="case-study-section case-study-note">
+            <h2>Reproduction discipline</h2>
+            <p>Two habits carry most of the weight, and both cost something.</p>
+            <p><strong>Declare the tolerance before you measure.</strong> Write down what counts as a successful reproduction — and what counts as a miss — before running anything. Then report both outcomes. In my current work some published baselines land inside the declared band and some land outside it, and I report the misses with the configuration details the original did not specify, because a miss under unmatched conditions is evidence about reproducibility, not proof that a published result is wrong. An audit that only surfaces failures is a prosecution, not a measurement.</p>
+            <p><strong>Treat oracle numbers as headroom, never as results.</strong> When several models make different mistakes, the accuracy you'd get by always picking the model that happens to be right looks spectacular — routinely into the mid-nineties. That number uses the answer key to make its choice. It is a diagnostic that says the errors are complementary and an ensemble is worth attempting. It is not an achieved result, and quoting it as one is how ensemble projects get funded and then disappoint.</p>
+            <p>The full method — the model kept off the measurement path, census rather than sampling, evidence grades that are never summed into one flattering number, and every model read attested as served — is on the <a href="/research" data-ph-cta="research_page" data-ph-cta-location="finance_page">Research page</a>. Two audits built on it, in law and in medication safety, are under peer review.</p>
+        </section>
+
+        <section class="case-study-section">
+            <h2>What this is worth to a finance team</h2>
+            <p>Four situations where this stops being academic.</p>
+            <p><strong>You are buying.</strong> A vendor's accuracy claim is a number produced by a procedure. Diligence usually interrogates the model and accepts the procedure. The five failure modes above are all invisible to model-side testing, all survive a competent technical review, and all inflate the number in your favor — which is to say, in the vendor's.</p>
+            <p><strong>You are shipping.</strong> If an internal system is about to sit next to an analyst, a trader, or a client-facing disclosure, the useful question is not its average accuracy. It is where the accuracy is concentrated, what it does when it cannot answer, and whether anyone can reconstruct afterwards which model produced which output. That last one is an audit-trail problem, and it is usually discovered at the worst possible time. If your logs name the harness or the agent runner instead of the model as served, you do not have an audit trail.</p>
+            <p><strong>You have to defend it.</strong> Model risk, internal audit, and regulators all eventually ask the same thing: what was this validated against, and who checked that. An evaluation whose answer key has never been independently derived is a weak answer to a question that gets asked under pressure.</p>
+            <p><strong>You are building, and you have hit a ceiling.</strong> A system reads your filings, earnings transcripts, or credit memos, and it is good but not good enough, and a bigger model has stopped helping. That is usually a data and protocol problem rather than a model problem: noisy training labels, a hard gold label where the experts actually disagreed, uncalibrated confidence that makes abstention impossible, or a test split that has been quietly flattering you. Those are fixable, and fixing them is cheaper than the next model tier.</p>
+        </section>
+
+        <section class="case-study-section case-study-cta">
+            <h2>If a number is about to decide something</h2>
+            <p>If you are shipping, buying, or defending an AI system in a financial workflow on the strength of an evaluation — or building the evaluation it will be judged by, or stuck below the accuracy you need on your own documents — send the details. The engagements on the <a href="/research" data-ph-cta="research_engagements" data-ph-cta-location="finance_page">Research page</a> apply directly: an Evaluation Audit, Gold-Standard Design, and Evidence &amp; Provenance Design, plus the model and protocol work that follows from them.</p>
+            <p>Related sectors: <a href="/law" data-ph-cta="law_page" data-ph-cta-location="finance_page">Law</a> · <a href="/medicine" data-ph-cta="medicine_page" data-ph-cta-location="finance_page">Medicine</a> · <a href="/research" data-ph-cta="research_page" data-ph-cta-location="finance_page">the method behind all three</a>.</p>
+            <p><a href="mailto:hello@vociferous.ai?subject=Finance%20AI%20evaluation&body=The%20system%20or%20benchmark%20a%20decision%20depends%20on:%0A%0AWhat%20the%20score%20decides:%0A%0AWho%20the%20expert%20reviewers%20would%20be:%0A%0ATimeline%20and%20constraints:" class="case-study-email" data-ph-cta="finance_email" data-ph-cta-location="finance_page">hello@vociferous.ai</a></p>
+        </section>
+    </article>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <span class="footer-logo">Vociferous AI</span>
+            <span class="footer-copy">© 2026</span>
+        </div>
+    </footer>
+</body>
+</html>

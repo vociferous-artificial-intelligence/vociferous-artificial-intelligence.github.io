@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vociferous AI — AI &amp; Web Application Development, Product Strategy, and Venture Advisory</title>
-    <meta name="description" content="Gregory O'Connor builds AI and web applications, audits the evaluations that AI decisions depend on, and advises ventures across product, market, brand, and financial strategy. Current work includes BNOW.NET, SceneFiend.app, Dreamlet.Studio, and NaviaAI.com.">
+    <meta name="description" content="Do your ambitious plans call for AI in a domain where being wrong is expensive? Gregory O'Connor builds AI and web applications for finance, law, and medicine — and audits the evaluations those systems are trusted on. Co-founder and founding CTO of Socure.">
     <link rel="canonical" href="https://vociferous.ai/">
     <meta property="og:title" content="Vociferous AI — AI &amp; Web Application Development, Product Strategy, and Venture Advisory">
-    <meta property="og:description" content="Gregory O'Connor builds AI and web applications, audits the evaluations that AI decisions depend on, and advises ventures across product, market, brand, and financial strategy. Current work includes BNOW.NET, SceneFiend.app, Dreamlet.Studio, and NaviaAI.com.">
+    <meta property="og:description" content="Do your ambitious plans call for AI in a domain where being wrong is expensive? Gregory O'Connor builds AI and web applications for finance, law, and medicine — and audits the evaluations those systems are trusted on. Co-founder and founding CTO of Socure.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://vociferous.ai/">
     <meta property="og:site_name" content="Vociferous AI">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Vociferous AI — AI &amp; Web Application Development, Product Strategy, and Venture Advisory">
-    <meta name="twitter:description" content="Gregory O'Connor builds AI and web applications, audits the evaluations that AI decisions depend on, and advises ventures across product, market, brand, and financial strategy. Current work includes BNOW.NET, SceneFiend.app, Dreamlet.Studio, and NaviaAI.com.">
+    <meta name="twitter:description" content="Do your ambitious plans call for AI in a domain where being wrong is expensive? Gregory O'Connor builds AI and web applications for finance, law, and medicine — and audits the evaluations those systems are trusted on. Co-founder and founding CTO of Socure.">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -28,7 +28,15 @@
             <a href="#" class="nav-logo">Vociferous AI</a>
             <div class="nav-links">
                 <a href="#work">Work</a>
-                <a href="/research" data-ph-cta="research_page" data-ph-cta-location="nav">Research</a>
+                <div class="nav-dd">
+                    <a href="/research" class="nav-dd-trigger" data-ph-cta="research_page" data-ph-cta-location="nav">Research <span class="nav-dd-caret" aria-hidden="true">&#9662;</span></a>
+                    <div class="nav-dd-menu">
+                        <a href="/research" data-ph-cta="research_page" data-ph-cta-location="nav_dd">Approach &amp; method</a>
+                        <a href="/finance" data-ph-cta="finance_page" data-ph-cta-location="nav_dd">Finance</a>
+                        <a href="/law" data-ph-cta="law_page" data-ph-cta-location="nav_dd">Law</a>
+                        <a href="/medicine" data-ph-cta="medicine_page" data-ph-cta-location="nav_dd">Medicine</a>
+                    </div>
+                </div>
                 <a href="#approach">How I work</a>
                 <a href="/about">About</a>
                 <a href="#contact">Contact</a>
@@ -39,28 +47,68 @@
     <main id="main">
     <header class="hero">
         <div class="hero-content">
-            <h1>I build AI and web applications—and help turn ambitious ideas into ventures that can ship.</h1>
-            <p class="hero-sub">I'm Gregory O'Connor, an MIT-trained product builder, strategist, and co-founder of Socure. Through Vociferous AI, I work from opportunity and market analysis through architecture, implementation, evaluation, branding, and launch.</p>
-            <p class="hero-sub-tech">Current work spans public-source intelligence, creative tools for actors and filmmakers, AI coaching, research on the integrity of AI evaluation, and a stealth AI-adjacent venture for fields where completeness, accountability, and accuracy matter most.</p>
+            <h1>Do your ambitious plans call for AI in a domain where being wrong is expensive?</h1>
+            <p class="hero-sub">Then a model's mistakes and hallucinations are not a research topic. They are your bottom line — and that is where I come in. I build the system, and I check the thing it was graded against, because almost nobody does.</p>
+            <p class="hero-sub-tech">Finance, law, and medicine, plus the products and ventures around them. I'm Gregory O'Connor — an MIT-trained Ph.D., co-founder and founding CTO of Socure, working from opportunity and market analysis through architecture, implementation, evaluation, branding, and launch.</p>
             <div class="hero-cta">
                 <a href="mailto:hello@vociferous.ai?subject=Hello" class="btn btn-primary" data-ph-cta="book_call" data-ph-cta-location="hero">Email Gregory</a>
                 <a href="mailto:hello@vociferous.ai?subject=Project%20Brief&body=What%20we're%20trying%20to%20accomplish:%0A%0AData%20and%20systems%20involved:%0A%0ATimeline%20%2B%20budget%20range:%0A%0AConstraints%20(security%2C%20compliance%2C%20stakeholders):" class="btn btn-secondary" data-ph-cta="email_brief" data-ph-cta-location="hero">Send a project brief</a>
             </div>
-            <p class="hero-note">Available for select consulting engagements: application development, product strategy, technical diligence, evaluation audits, and venture evaluation.</p>
+            <p class="hero-note">Available for select consulting engagements: application development, product strategy, technical diligence, evaluation audits, and venture evaluation. <a href="#domains" data-ph-cta="domains" data-ph-cta-location="hero">See where I work →</a></p>
         </div>
     </header>
+
+    <section id="domains" class="domains">
+        <div class="domains-inner">
+            <h2>Where I work</h2>
+            <p class="domains-intro">Three regulated sectors where a wrong answer is expensive, and three product domains where I have built and shipped. The method is the same in all six: state the claim, name the evidence it rests on, be explicit about what stays uncertain.</p>
+            <div class="domains-grid">
+                <a class="domain-card" href="/finance" data-ph-cta="finance_page" data-ph-cta-location="domains">
+                    <span class="domain-tag">Sector</span>
+                    <h3>Finance</h3>
+                    <p>Identity infrastructure for financial institutions, consumer-fintech venture advisory from idea to investable plan, and current research measuring and improving AI over filings, earnings calls, and annual reports.</p>
+                </a>
+                <a class="domain-card" href="/law" data-ph-cta="law_page" data-ph-cta-location="domains">
+                    <span class="domain-tag">Sector</span>
+                    <h3>Law</h3>
+                    <p>Source-grounded review and citation finding, private model training that keeps privileged material in your environment, and an audit of a widely used legal-reasoning benchmark under peer review.</p>
+                </a>
+                <a class="domain-card" href="/medicine" data-ph-cta="medicine_page" data-ph-cta-location="domains">
+                    <span class="domain-tag">Sector</span>
+                    <h3>Medicine</h3>
+                    <p>Source-grounded evidence synthesis that keeps uncertainty intact, and a structural audit of a public medication-safety benchmark that infers safety from the absence of a recorded risk. Under peer review.</p>
+                </a>
+                <a class="domain-card" href="/work/bnow.html" data-ph-cta="case_study_bnow" data-ph-cta-location="domains">
+                    <span class="domain-tag">Product</span>
+                    <h3>Intelligence &amp; public information</h3>
+                    <p>BNOW.NET — a live, self-running public-source intelligence product that keeps every claim attached to its evidence and publicly grades its own accuracy every day. Built and taken to market.</p>
+                </a>
+                <a class="domain-card" href="/work/scenefiend.html" data-ph-cta="case_study_scenefiend" data-ph-cta-location="domains">
+                    <span class="domain-tag">Product</span>
+                    <h3>Media &amp; entertainment</h3>
+                    <p>SceneFiend.app for actors and Dreamlet.Studio for female-gaze cinema — two consumer products with real content-rights constraints, built from inside the craft rather than from generic entertainment AI.</p>
+                </a>
+                <a class="domain-card" href="/work/navia-ai-board-advisory.html" data-ph-cta="case_study_navia" data-ph-cta-location="domains">
+                    <span class="domain-tag">Advisory</span>
+                    <h3>Venture &amp; product advisory</h3>
+                    <p>Advisory-board work, technical diligence, and hands-on engineering for founding teams — market, brand, go-to-market, and financial analysis held to the same standard as the code.</p>
+                </a>
+            </div>
+        </div>
+    </section>
 
     <section id="work" class="work">
         <div class="work-inner">
             <h2>Selected work</h2>
-            <p class="work-intro">Recent work across applications, venture building, and research. Each project below was taken from opportunity through a working system — public descriptions focus on what was built and decided; private methods and client information stay private.</p>
+            <p class="work-intro">Work across applications, venture building, and research — most of it taken from opportunity through a working system, alongside the domain and research work that informs it. Public descriptions focus on what was built and decided; private methods and client information stay private.</p>
             <ul class="re-fit-list work-overview">
+                <li><strong><a href="/finance" data-ph-cta="finance_page" data-ph-cta-location="work_overview">Financial services and financial AI</a> — infrastructure, research, and method:</strong> co-founder and founding CTO of <a href="https://www.socure.com/" target="_blank" rel="noopener" data-ph-cta="socure" data-ph-cta-location="work_overview">Socure</a>, where I built the early technical case for machine-learned identity decisioning and took the first meetings with American Express and other major financial institutions. Current work is on both sides of AI over financial language: auditing whether an evaluation of filings, earnings calls, and annual reports measures what it claims, and developing the methods that raise what a model actually gets right on those documents — domain fine-tuning and training-label repair, per-item routing across models whose errors differ, training toward the expert vote distribution rather than one gold label, and calibrated abstention. Plus market, pricing, and unit-economics analysis across fintech ventures. <a href="/finance" data-ph-cta="case_study_finance" data-ph-cta-location="work_overview">Read more →</a></li>
                 <li><strong><a href="https://bnow.net/" target="_blank" rel="noopener" data-ph-cta="bnow_app" data-ph-cta-location="work_overview">BNOW.NET</a> — public-source intelligence, built and taken to market:</strong> a live, self-running intelligence product for analysts working fast-moving public information — continuous collection, a data-derived source-reliability registry, claims that stay attached to their evidence by database constraint, and a public scoreboard that grades the system's own output against expert analysis every day. I built the application and did the venture work around it: market analysis, pricing design, licensing strategy, and launch sequencing. <a href="/work/bnow.html" data-ph-cta="case_study_bnow" data-ph-cta-location="work_overview">Read more →</a></li>
                 <li><strong><a href="https://scenefiend.app/" target="_blank" rel="noopener" data-ph-cta="scenefiend_app" data-ph-cta-location="work_overview">SceneFiend.app</a> — scene and monologue discovery for actors:</strong> a full consumer product — recommendations with stated reasoning, a curated metadata-only library, shareable piece pages, and a saved book actors rehearse from — built and operated by one person in six months on an AI-native workflow, and held in a small actor beta until its content-rights and quality gates clear. <a href="/work/scenefiend.html" data-ph-cta="case_study_scenefiend" data-ph-cta-location="work_overview">Read more →</a></li>
                 <li><strong><a href="https://naviaai.com/" target="_blank" rel="noopener" data-ph-cta="navia_site" data-ph-cta-location="work_overview">NaviaAI.com</a> — advisory board, venture research, and product engineering:</strong> work on both sides of an AI coaching company — brand, market, and design research for the founding team, and hands-on engineering with the technical founder: clearing the technical debt that blocked the multi-project feature beta users were asking for, then shipping that feature across users' encrypted coaching records with a rehearsed migration and a rollback. <a href="/work/navia-ai-board-advisory.html" data-ph-cta="case_study_navia" data-ph-cta-location="work_overview">Read more →</a></li>
                 <li><strong><a href="https://dreamlet.studio/" target="_blank" rel="noopener" data-ph-cta="dreamlet_app" data-ph-cta-location="work_overview">Dreamlet.Studio</a> — a curated home for female-gaze cinema:</strong> a live, filmmaker-first platform pointing young cinephiles to short films that show women as fully realized people. Co-founded with Jacqui de Jong, and built out from a four-hour sprint that placed 12th with a special mention at a NY Tech Week 2026 competition into a supply-first venture with film-by-film licensing, filmmaker agreements, and rights enforced in the product. <a href="/work/dreamlet.html" data-ph-cta="case_study_dreamlet" data-ph-cta-location="work_overview">Read more →</a></li>
                 <li><strong>Working Title: Epistemic — stealth AI-adjacent venture:</strong> developing systems intended to bring greater certainty to applications where completeness, accountability, and accuracy matter most. Potential vertical markets include pharmaceuticals, finance, law, and defense. The methodology remains private. <a href="/work/epistemic.html" data-ph-cta="case_study_epistemic" data-ph-cta-location="work_overview">Read more →</a></li>
-                <li><strong>Venture evaluation and advisory:</strong> business, brand, market, go-to-market, and financial analysis across fintech, infrastructure, legal and public-interest work, health, and emerging AI ventures.</li>
+                <li><strong>Venture evaluation and advisory:</strong> business, brand, market, go-to-market, and financial analysis across <a href="/finance" data-ph-cta="finance_page" data-ph-cta-location="work_overview">fintech</a>, infrastructure, legal and public-interest work, health, and emerging AI ventures.</li>
             </ul>
             <p class="work-ethics">I don't do political microtargeting, covert persuasion, or surveillance work. If your use case needs careful boundaries, we figure those out first.</p>
         </div>
@@ -74,8 +122,9 @@
                 <li><strong>Two benchmark audits, under peer review:</strong> one of a widely used legal-reasoning benchmark, re-deriving every gold label from primary authority with the answer key sealed off; one of a public medication-safety benchmark whose construction rule infers that a drug is safe from the absence of a recorded risk. Titles, venue, and full findings stay private until the decisions land.</li>
                 <li><strong>A method built to be defended:</strong> the model stays off the measurement path, every item is checked rather than sampled, evidence grades are never summed into one flattering number, and everything that produced a result is attestable afterwards.</li>
                 <li><strong>Three engagements built on it:</strong> an Evaluation Audit, Gold-Standard Design, and Evidence &amp; Provenance Design — for teams about to ship, buy, or defend an AI system on the strength of a score.</li>
+                <li><strong>Finance, in progress — measurement and method:</strong> an independent reproduction of published model baselines for inference over financial disclosure language — filings, earnings calls, and annual reports — against an evaluation set carrying several finance-professional judgments per item rather than one gold label; and, built on it, methods to raise what a model actually gets right on financial sources: domain fine-tuning and training-label repair, per-item routing across models that fail differently, training toward the expert distribution, and calibrated abstention. <a href="/finance" data-ph-cta="finance_page" data-ph-cta-location="research_overview">Read the finance work →</a></li>
             </ul>
-            <p class="work-intro"><a href="/research" data-ph-cta="research_page" data-ph-cta-location="research_overview">Read the research approach →</a></p>
+            <p class="work-intro"><a href="/research" data-ph-cta="research_page" data-ph-cta-location="research_overview">The approach and method →</a> &nbsp;·&nbsp; <a href="/finance" data-ph-cta="finance_page" data-ph-cta-location="research_overview">Finance →</a> &nbsp;·&nbsp; <a href="/law" data-ph-cta="law_page" data-ph-cta-location="research_overview">Law →</a> &nbsp;·&nbsp; <a href="/medicine" data-ph-cta="medicine_page" data-ph-cta-location="research_overview">Medicine →</a></p>
         </div>
     </section>
 
@@ -89,6 +138,7 @@
                 <li>Making an existing codebase safe to change — tests, CI, and a working agreement for AI coding tools — then shipping the risky change the team has been deferring.</li>
                 <li>Product and venture strategy, including technical diligence and build-versus-buy decisions.</li>
                 <li>Market, brand, go-to-market, and financial analysis for early-stage ventures.</li>
+                <li><a href="/finance" data-ph-cta="finance_page" data-ph-cta-location="re_fit">AI over financial language</a> — inference over filings, earnings calls, and credit and analyst documents: measuring it honestly, then raising what it gets right.</li>
                 <li>Source-grounded knowledge and intelligence systems where accuracy, provenance, privacy, and human review matter.</li>
                 <li>Evaluation and operating design: <a href="/research" data-ph-cta="research_page" data-ph-cta-location="re_fit">auditing the benchmarks and answer keys a decision depends on</a>, plus failure modes, costs, logging, governance, and what a team needs to run the system after launch.</li>
             </ul>
@@ -171,13 +221,14 @@
     <section id="about" class="about">
         <div class="about-inner">
             <h2>About</h2>
-            <p>I'm Gregory O'Connor, an MIT-trained Ph.D., product builder, strategist, and co-founder of Socure, based in New York. I build applications and evaluate ventures at the point where technology, product judgment, and business reality have to agree.</p>
-            <p>My current portfolio includes BNOW.NET, SceneFiend.app, Dreamlet.Studio (co-founded with Jacqui de Jong), advisory and product work with NaviaAI.com, and a stealth AI-adjacent venture under the working title Epistemic. Across that work, I also handle market, brand, go-to-market, and financial analysis—not only the software build. I also do research on evaluation integrity — auditing the benchmarks and answer keys AI systems are graded against — with two papers currently under peer review.</p>
+            <p>I'm Gregory O'Connor, an MIT-trained Ph.D., product builder, strategist, and co-founder and founding CTO of Socure, based in New York. I build applications and evaluate ventures at the point where technology, product judgment, and business reality have to agree.</p>
+            <p>My current portfolio includes financial-language AI research and method work, BNOW.NET, SceneFiend.app, Dreamlet.Studio (co-founded with Jacqui de Jong), advisory and product work with NaviaAI.com, and a stealth AI-adjacent venture under the working title Epistemic. Across that work, I also handle market, brand, go-to-market, and financial analysis—not only the software build. I also do research on evaluation integrity — auditing the benchmarks and answer keys AI systems are graded against — with two papers currently under peer review.</p>
             <p>I'm also a working actor with IMDb credits. That grounding in performance and film is part of why SceneFiend and Dreamlet come from inside the craft — how actors choose and prepare material, and which stories film chooses to center — rather than generic entertainment AI.</p>
             <p>For stealth and client work, public descriptions stay at the level needed to establish capability. Private methodology, client information, and internal analysis remain private.</p>
             <div class="about-links">
                 <a href="/about" data-ph-cta="about_page" data-ph-cta-location="about">Full bio</a>
                 <a href="/research" data-ph-cta="research_page" data-ph-cta-location="about">Research</a>
+                <a href="/finance" data-ph-cta="finance_page" data-ph-cta-location="about">Finance</a>
                 <a href="https://www.linkedin.com/in/gregory-oconnor/" target="_blank" rel="noopener" data-ph-cta="linkedin" data-ph-cta-location="about">LinkedIn</a>
                 <a href="https://www.imdb.com/name/nm1828188/" target="_blank" rel="noopener" data-ph-cta="imdb" data-ph-cta-location="about">IMDb</a>
                 <a href="https://bnow.net/" target="_blank" rel="noopener" data-ph-cta="bnow_app" data-ph-cta-location="about">BNOW.NET</a>
